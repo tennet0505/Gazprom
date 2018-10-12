@@ -15,6 +15,7 @@
 		06120A462170A4D70006DB8A /* NewPersonalAccountsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 06120A452170A4D70006DB8A /* NewPersonalAccountsViewController.swift */; };
 		06120A482170A4F40006DB8A /* PersonalAccountsTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 06120A472170A4F40006DB8A /* PersonalAccountsTableViewCell.swift */; };
 		06120A4B2170AE390006DB8A /* MapViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 06120A4A2170AE390006DB8A /* MapViewController.swift */; };
+		06120A4D2170B8E70006DB8A /* SettingsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 06120A4C2170B8E70006DB8A /* SettingsViewController.swift */; };
 		06D6063321708B8D001F262A /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 06D6063221708B8D001F262A /* AppDelegate.swift */; };
 		06D6063521708B8D001F262A /* MainViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 06D6063421708B8D001F262A /* MainViewController.swift */; };
 		06D6063821708B8D001F262A /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 06D6063621708B8D001F262A /* Main.storyboard */; };
@@ -33,6 +34,7 @@
 		06120A452170A4D70006DB8A /* NewPersonalAccountsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NewPersonalAccountsViewController.swift; sourceTree = "<group>"; };
 		06120A472170A4F40006DB8A /* PersonalAccountsTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PersonalAccountsTableViewCell.swift; sourceTree = "<group>"; };
 		06120A4A2170AE390006DB8A /* MapViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MapViewController.swift; sourceTree = "<group>"; };
+		06120A4C2170B8E70006DB8A /* SettingsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsViewController.swift; sourceTree = "<group>"; };
 		06D6062F21708B8D001F262A /* Gazprom.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Gazprom.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		06D6063221708B8D001F262A /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		06D6063421708B8D001F262A /* MainViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainViewController.swift; sourceTree = "<group>"; };
@@ -132,6 +134,7 @@
 			isa = PBXGroup;
 			children = (
 				06D6063421708B8D001F262A /* MainViewController.swift */,
+				06120A4C2170B8E70006DB8A /* SettingsViewController.swift */,
 				06D606492170982F001F262A /* News */,
 				06120A3B21709FBD0006DB8A /* Payments */,
 				06120A422170A4390006DB8A /* PersonalAccounts */,
@@ -231,6 +234,7 @@
 				06120A4B2170AE390006DB8A /* MapViewController.swift in Sources */,
 				06D6064B217098A3001F262A /* NewsTableViewCell.swift in Sources */,
 				06120A442170A4BE0006DB8A /* PersonalAccountsViewController.swift in Sources */,
+				06120A4D2170B8E70006DB8A /* SettingsViewController.swift in Sources */,
 				06120A412170A10E0006DB8A /* PayDescriptionsViewController.swift in Sources */,
 				06D6063321708B8D001F262A /* AppDelegate.swift in Sources */,
 			);
