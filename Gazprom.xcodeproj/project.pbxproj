@@ -7,21 +7,41 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		06120A3A21709C3F0006DB8A /* NewsDescriptionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 06120A3921709C3F0006DB8A /* NewsDescriptionViewController.swift */; };
+		06120A3D2170A0CF0006DB8A /* PaymentsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 06120A3C2170A0CF0006DB8A /* PaymentsViewController.swift */; };
+		06120A3F2170A0E30006DB8A /* PaymentsTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 06120A3E2170A0E30006DB8A /* PaymentsTableViewCell.swift */; };
+		06120A412170A10E0006DB8A /* PayDescriptionsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 06120A402170A10E0006DB8A /* PayDescriptionsViewController.swift */; };
+		06120A442170A4BE0006DB8A /* PersonalAccountsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 06120A432170A4BE0006DB8A /* PersonalAccountsViewController.swift */; };
+		06120A462170A4D70006DB8A /* NewPersonalAccountsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 06120A452170A4D70006DB8A /* NewPersonalAccountsViewController.swift */; };
+		06120A482170A4F40006DB8A /* PersonalAccountsTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 06120A472170A4F40006DB8A /* PersonalAccountsTableViewCell.swift */; };
+		06120A4B2170AE390006DB8A /* MapViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 06120A4A2170AE390006DB8A /* MapViewController.swift */; };
 		06D6063321708B8D001F262A /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 06D6063221708B8D001F262A /* AppDelegate.swift */; };
-		06D6063521708B8D001F262A /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 06D6063421708B8D001F262A /* ViewController.swift */; };
+		06D6063521708B8D001F262A /* MainViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 06D6063421708B8D001F262A /* MainViewController.swift */; };
 		06D6063821708B8D001F262A /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 06D6063621708B8D001F262A /* Main.storyboard */; };
 		06D6063A21708B8E001F262A /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 06D6063921708B8E001F262A /* Assets.xcassets */; };
 		06D6063D21708B8E001F262A /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 06D6063B21708B8E001F262A /* LaunchScreen.storyboard */; };
+		06D60648217097C1001F262A /* NewsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 06D60647217097C1001F262A /* NewsViewController.swift */; };
+		06D6064B217098A3001F262A /* NewsTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 06D6064A217098A3001F262A /* NewsTableViewCell.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		06120A3921709C3F0006DB8A /* NewsDescriptionViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NewsDescriptionViewController.swift; sourceTree = "<group>"; };
+		06120A3C2170A0CF0006DB8A /* PaymentsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PaymentsViewController.swift; sourceTree = "<group>"; };
+		06120A3E2170A0E30006DB8A /* PaymentsTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PaymentsTableViewCell.swift; sourceTree = "<group>"; };
+		06120A402170A10E0006DB8A /* PayDescriptionsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PayDescriptionsViewController.swift; sourceTree = "<group>"; };
+		06120A432170A4BE0006DB8A /* PersonalAccountsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PersonalAccountsViewController.swift; sourceTree = "<group>"; };
+		06120A452170A4D70006DB8A /* NewPersonalAccountsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NewPersonalAccountsViewController.swift; sourceTree = "<group>"; };
+		06120A472170A4F40006DB8A /* PersonalAccountsTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PersonalAccountsTableViewCell.swift; sourceTree = "<group>"; };
+		06120A4A2170AE390006DB8A /* MapViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MapViewController.swift; sourceTree = "<group>"; };
 		06D6062F21708B8D001F262A /* Gazprom.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Gazprom.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		06D6063221708B8D001F262A /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		06D6063421708B8D001F262A /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		06D6063421708B8D001F262A /* MainViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainViewController.swift; sourceTree = "<group>"; };
 		06D6063721708B8D001F262A /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		06D6063921708B8E001F262A /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		06D6063C21708B8E001F262A /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		06D6063E21708B8E001F262A /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		06D60647217097C1001F262A /* NewsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NewsViewController.swift; sourceTree = "<group>"; };
+		06D6064A217098A3001F262A /* NewsTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NewsTableViewCell.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -35,6 +55,34 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		06120A3B21709FBD0006DB8A /* Payments */ = {
+			isa = PBXGroup;
+			children = (
+				06120A3C2170A0CF0006DB8A /* PaymentsViewController.swift */,
+				06120A402170A10E0006DB8A /* PayDescriptionsViewController.swift */,
+				06120A3E2170A0E30006DB8A /* PaymentsTableViewCell.swift */,
+			);
+			path = Payments;
+			sourceTree = "<group>";
+		};
+		06120A422170A4390006DB8A /* PersonalAccounts */ = {
+			isa = PBXGroup;
+			children = (
+				06120A432170A4BE0006DB8A /* PersonalAccountsViewController.swift */,
+				06120A452170A4D70006DB8A /* NewPersonalAccountsViewController.swift */,
+				06120A472170A4F40006DB8A /* PersonalAccountsTableViewCell.swift */,
+			);
+			path = PersonalAccounts;
+			sourceTree = "<group>";
+		};
+		06120A492170AE220006DB8A /* Map */ = {
+			isa = PBXGroup;
+			children = (
+				06120A4A2170AE390006DB8A /* MapViewController.swift */,
+			);
+			path = Map;
+			sourceTree = "<group>";
+		};
 		06D6062621708B8D001F262A = {
 			isa = PBXGroup;
 			children = (
@@ -54,14 +102,52 @@
 		06D6063121708B8D001F262A /* Gazprom */ = {
 			isa = PBXGroup;
 			children = (
+				06D6064621708BFE001F262A /* Controllers */,
+				06D6064521708BF7001F262A /* Views */,
+				06D6064421708BE8001F262A /* Models */,
 				06D6063221708B8D001F262A /* AppDelegate.swift */,
-				06D6063421708B8D001F262A /* ViewController.swift */,
-				06D6063621708B8D001F262A /* Main.storyboard */,
-				06D6063921708B8E001F262A /* Assets.xcassets */,
-				06D6063B21708B8E001F262A /* LaunchScreen.storyboard */,
 				06D6063E21708B8E001F262A /* Info.plist */,
 			);
 			path = Gazprom;
+			sourceTree = "<group>";
+		};
+		06D6064421708BE8001F262A /* Models */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Models;
+			sourceTree = "<group>";
+		};
+		06D6064521708BF7001F262A /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				06D6063921708B8E001F262A /* Assets.xcassets */,
+				06D6063621708B8D001F262A /* Main.storyboard */,
+				06D6063B21708B8E001F262A /* LaunchScreen.storyboard */,
+			);
+			path = Views;
+			sourceTree = "<group>";
+		};
+		06D6064621708BFE001F262A /* Controllers */ = {
+			isa = PBXGroup;
+			children = (
+				06D6063421708B8D001F262A /* MainViewController.swift */,
+				06D606492170982F001F262A /* News */,
+				06120A3B21709FBD0006DB8A /* Payments */,
+				06120A422170A4390006DB8A /* PersonalAccounts */,
+				06120A492170AE220006DB8A /* Map */,
+			);
+			path = Controllers;
+			sourceTree = "<group>";
+		};
+		06D606492170982F001F262A /* News */ = {
+			isa = PBXGroup;
+			children = (
+				06D60647217097C1001F262A /* NewsViewController.swift */,
+				06120A3921709C3F0006DB8A /* NewsDescriptionViewController.swift */,
+				06D6064A217098A3001F262A /* NewsTableViewCell.swift */,
+			);
+			path = News;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -135,7 +221,17 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				06D6063521708B8D001F262A /* ViewController.swift in Sources */,
+				06D60648217097C1001F262A /* NewsViewController.swift in Sources */,
+				06120A3A21709C3F0006DB8A /* NewsDescriptionViewController.swift in Sources */,
+				06D6063521708B8D001F262A /* MainViewController.swift in Sources */,
+				06120A482170A4F40006DB8A /* PersonalAccountsTableViewCell.swift in Sources */,
+				06120A3D2170A0CF0006DB8A /* PaymentsViewController.swift in Sources */,
+				06120A3F2170A0E30006DB8A /* PaymentsTableViewCell.swift in Sources */,
+				06120A462170A4D70006DB8A /* NewPersonalAccountsViewController.swift in Sources */,
+				06120A4B2170AE390006DB8A /* MapViewController.swift in Sources */,
+				06D6064B217098A3001F262A /* NewsTableViewCell.swift in Sources */,
+				06120A442170A4BE0006DB8A /* PersonalAccountsViewController.swift in Sources */,
+				06120A412170A10E0006DB8A /* PayDescriptionsViewController.swift in Sources */,
 				06D6063321708B8D001F262A /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
