@@ -34,35 +34,48 @@
                         <subviews>
                             <mapView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" mapType="standard" translatesAutoresizingMaskIntoConstraints="NO" id="k4n-Da-mt3">
                                 <rect key="frame" x="0.0" y="88" width="375" height="641"/>
+                                <connections>
+                                    <outlet property="delegate" destination="ns6-e4-4yx" id="CBU-2j-crn"/>
+                                </connections>
                             </mapView>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Pin" translatesAutoresizingMaskIntoConstraints="NO" id="yuU-Ra-ZfF">
-                                <rect key="frame" x="167.66666666666666" y="366" width="40" height="40"/>
-                                <constraints>
-                                    <constraint firstAttribute="height" constant="40" id="1j1-fs-U5s"/>
-                                    <constraint firstAttribute="width" constant="40" id="mzF-Zc-h4X"/>
-                                </constraints>
-                            </imageView>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="w5l-ym-mLc">
-                                <rect key="frame" x="0.0" y="679" width="375" height="50"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="w5l-ym-mLc">
+                                <rect key="frame" x="0.0" y="708.66666666666663" width="375" height="20.333333333333371"/>
                                 <color key="backgroundColor" red="0.92143100499999997" green="0.92145264149999995" blue="0.92144101860000005" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                <constraints>
-                                    <constraint firstAttribute="height" constant="50" id="hRE-uI-pJ7"/>
-                                </constraints>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="0uh-Ub-DT1">
+                                <rect key="frame" x="315" y="648.66666666666663" width="40" height="40"/>
+                                <color key="backgroundColor" red="0.0" green="0.8821112995575342" blue="0.31881666180000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="40" id="Oyl-IL-MxQ"/>
+                                    <constraint firstAttribute="width" constant="40" id="e23-w9-2tY"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="25"/>
+                                <state key="normal" title="Go">
+                                    <color key="titleColor" red="0.92143100499999997" green="0.92145264149999995" blue="0.92144101860000005" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                </state>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                                        <integer key="value" value="20"/>
+                                    </userDefinedRuntimeAttribute>
+                                </userDefinedRuntimeAttributes>
+                                <connections>
+                                    <action selector="goButtonTapped:" destination="ns6-e4-4yx" eventType="touchUpInside" id="KdG-V0-A7d"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <constraints>
                             <constraint firstItem="shM-oZ-Gla" firstAttribute="trailing" secondItem="k4n-Da-mt3" secondAttribute="trailing" id="0o4-8w-Cid"/>
                             <constraint firstItem="shM-oZ-Gla" firstAttribute="bottom" secondItem="w5l-ym-mLc" secondAttribute="bottom" id="5Ix-J1-fDV"/>
-                            <constraint firstItem="yuU-Ra-ZfF" firstAttribute="centerX" secondItem="Osy-VG-Z2n" secondAttribute="centerX" id="A6R-0W-xkb"/>
+                            <constraint firstItem="shM-oZ-Gla" firstAttribute="trailing" secondItem="0uh-Ub-DT1" secondAttribute="trailing" constant="20" id="7hn-qm-lFV"/>
                             <constraint firstItem="k4n-Da-mt3" firstAttribute="leading" secondItem="shM-oZ-Gla" secondAttribute="leading" id="K3d-yQ-9LS"/>
                             <constraint firstItem="shM-oZ-Gla" firstAttribute="bottom" secondItem="k4n-Da-mt3" secondAttribute="bottom" id="O2Q-lI-dVH"/>
-                            <constraint firstItem="yuU-Ra-ZfF" firstAttribute="centerY" secondItem="Osy-VG-Z2n" secondAttribute="centerY" constant="-20" id="YJj-yT-jyO"/>
                             <constraint firstItem="shM-oZ-Gla" firstAttribute="trailing" secondItem="w5l-ym-mLc" secondAttribute="trailing" id="dxp-vL-aHS"/>
                             <constraint firstItem="w5l-ym-mLc" firstAttribute="leading" secondItem="shM-oZ-Gla" secondAttribute="leading" id="ff3-6J-wwH"/>
+                            <constraint firstItem="w5l-ym-mLc" firstAttribute="top" secondItem="0uh-Ub-DT1" secondAttribute="bottom" constant="20" id="kSm-Fu-hEx"/>
                             <constraint firstItem="k4n-Da-mt3" firstAttribute="top" secondItem="shM-oZ-Gla" secondAttribute="top" id="oHn-Hx-6eY"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="shM-oZ-Gla"/>
@@ -795,7 +808,6 @@
     </scenes>
     <resources>
         <image name="News" width="24" height="24"/>
-        <image name="Pin" width="60" height="74"/>
         <image name="SettingsIcon" width="20.333333969116211" height="20.333333969116211"/>
     </resources>
     <inferredMetricsTieBreakers>
