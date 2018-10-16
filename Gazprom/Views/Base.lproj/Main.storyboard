@@ -154,7 +154,7 @@
                                             <rect key="frame" x="0.0" y="0.0" width="375" height="69.666666666666671"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
-                                                <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="PW3-u4-DKv">
+                                                <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="PW3-u4-DKv">
                                                     <rect key="frame" x="8" y="7.9999999999999964" width="100" height="53.666666666666657"/>
                                                     <constraints>
                                                         <constraint firstAttribute="height" constant="53.5" id="Tho-9H-d1Z"/>
@@ -205,6 +205,9 @@
                             </connections>
                         </barButtonItem>
                     </navigationItem>
+                    <connections>
+                        <outlet property="tableView" destination="enh-Gt-okN" id="0pL-Cm-LrN"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="vMa-2Z-8FA" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
@@ -579,7 +582,7 @@
                         <rect key="frame" x="0.0" y="0.0" width="375" height="812"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="s5o-wZ-An5">
+                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Elsom" translatesAutoresizingMaskIntoConstraints="NO" id="s5o-wZ-An5">
                                 <rect key="frame" x="16" y="62" width="343" height="92"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="92" id="B3m-Lh-LyA"/>
@@ -851,11 +854,12 @@
         </scene>
     </scenes>
     <resources>
+        <image name="Elsom" width="251" height="201"/>
         <image name="News" width="24" height="24"/>
         <image name="SettingsIcon" width="20.333333969116211" height="20.333333969116211"/>
     </resources>
     <inferredMetricsTieBreakers>
-        <segue reference="Lsd-CK-4CP"/>
+        <segue reference="8xS-e8-L49"/>
         <segue reference="s8W-6s-pYR"/>
     </inferredMetricsTieBreakers>
 </document>

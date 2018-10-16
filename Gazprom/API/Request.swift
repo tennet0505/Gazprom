@@ -54,4 +54,19 @@ class ApiClient {
                 }
         }
     }
+    
+    func getPayments ( successHandler :@escaping ([PaymentModel])->(),
+                   errorHandler   :@escaping (Error)->()){
+        
+        let URL = "\(serverUrl)/payments.json"
+        
+        Alamofire.request(URL,
+                          headers: jsonHeaders)
+            .responseArray { (response: DataResponse<[PaymentModel]>) in
+                
+                if let itemArray = response.result.value{
+                    successHandler(itemArray)
+                }
+        }
+    }
 }

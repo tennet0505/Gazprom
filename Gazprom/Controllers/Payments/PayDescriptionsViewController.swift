@@ -7,9 +7,11 @@
 //
 
 import UIKit
+import AlamofireImage
 
 class PayDescriptionsViewController: UIViewController {
 
+    let serverUrl = "https://puppit.spalmalo.com"
     @IBOutlet weak var imageLogo: UIImageView!
     @IBOutlet weak var descriptionTextView: UITextView!
     
@@ -18,8 +20,11 @@ class PayDescriptionsViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-
-        imageLogo.image = UIImage(named: img)
+        
+        let urlStringFull = "\(serverUrl)\(img)"
+        if let urlImg = URL(string: urlStringFull ) {
+            imageLogo.af_setImage(withURL: urlImg)
+        }
         descriptionTextView.text = descriptionPayment
         
     }

@@ -7,17 +7,38 @@
 //
 
 import UIKit
+import Alamofire
+import AlamofireImage
+
 
 class PaymentsViewController: UIViewController {
 
-    var arrayOfpayment = ["Visa","Wallet","Cash"]
-    var arrayOfpayLogo = ["Visa","Wallet","Cash"]
+    let serverUrl = "https://puppit.spalmalo.com"
+    var arrayOfpayments = [PaymentModel]()
+    let client = ApiClient()
     
+    @IBOutlet weak var tableView: UITableView!
     override func viewDidLoad() {
         super.viewDidLoad()
 
+        getPaymentss()
     }
     
+    
+    func getPaymentss() {
+        client.getPayments(successHandler: { (value) in
+            
+            let array = value
+            for pay in array {
+                self.arrayOfpayments.append(pay)
+                
+            }
+            self.tableView.reloadData()
+            print(self.arrayOfpayments)
+        }) { (error) in
+            print(error)
+        }
+    }
 
 
 }
@@ -25,13 +46,20 @@ class PaymentsViewController: UIViewController {
 extension PaymentsViewController: UITableViewDelegate, UITableViewDataSource{
     
     public func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return 3
+        return arrayOfpayments.count
     }
     
     public func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
+    
         let cell = tableView.dequeueReusableCell(withIdentifier: "Cell", for: indexPath) as! PaymentsTableViewCell
-        cell.labelTitle.text = arrayOfpayment[indexPath.row]
-        cell.imageLogo.image = UIImage(named: arrayOfpayLogo[indexPath.row])
+        
+        cell.labelTitle.text = arrayOfpayments[indexPath.row].title
+        if let urlImg = arrayOfpayments[indexPath.row].logo?.url{
+            let urlStringFull = "\(serverUrl)\(urlImg)"
+            if let urlImg = URL(string: urlStringFull){
+                cell.imageLogo.af_setImage(withURL: urlImg)
+            }
+        }
         
         return cell
     }
@@ -41,8 +69,8 @@ extension PaymentsViewController: UITableViewDelegate, UITableViewDataSource{
         let sb = UIStoryboard(name: "Main", bundle: nil)
         let vc = sb.instantiateViewController(withIdentifier: "PayDescriptionsViewController") as! PayDescriptionsViewController
         
-        vc.img = arrayOfpayLogo[indexPath.row]
-        vc.descriptionPayment = arrayOfpayment[indexPath.row]
+        vc.img = arrayOfpayments[indexPath.row].logo?.url ?? "www.google.com"
+        vc.descriptionPayment = arrayOfpayments[indexPath.row].description ?? "NoData"
         
         self.navigationController?.pushViewController(vc, animated: true)
         
