@@ -16,6 +16,10 @@
 		06120A482170A4F40006DB8A /* PersonalAccountsTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 06120A472170A4F40006DB8A /* PersonalAccountsTableViewCell.swift */; };
 		06120A4B2170AE390006DB8A /* MapViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 06120A4A2170AE390006DB8A /* MapViewController.swift */; };
 		06120A4D2170B8E70006DB8A /* SettingsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 06120A4C2170B8E70006DB8A /* SettingsViewController.swift */; };
+		0656EDB321748ACC0050A802 /* GoogleMapViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0656EDB221748ACC0050A802 /* GoogleMapViewController.swift */; };
+		0656EDB52174B1840050A802 /* CurrentPlaceViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0656EDB42174B1840050A802 /* CurrentPlaceViewController.swift */; };
+		0656EDB921758F2B0050A802 /* MarkerModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0656EDB821758F2B0050A802 /* MarkerModel.swift */; };
+		0656EDBC2175CAFA0050A802 /* Request.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0656EDBB2175CAFA0050A802 /* Request.swift */; };
 		06D6063321708B8D001F262A /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 06D6063221708B8D001F262A /* AppDelegate.swift */; };
 		06D6063521708B8D001F262A /* MainViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 06D6063421708B8D001F262A /* MainViewController.swift */; };
 		06D6063821708B8D001F262A /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 06D6063621708B8D001F262A /* Main.storyboard */; };
@@ -23,6 +27,7 @@
 		06D6063D21708B8E001F262A /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 06D6063B21708B8E001F262A /* LaunchScreen.storyboard */; };
 		06D60648217097C1001F262A /* NewsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 06D60647217097C1001F262A /* NewsViewController.swift */; };
 		06D6064B217098A3001F262A /* NewsTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 06D6064A217098A3001F262A /* NewsTableViewCell.swift */; };
+		37AFBFA7E55AB1DD7005000C /* Pods_Gazprom.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = ED4577290297AFB1B12B23FA /* Pods_Gazprom.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -35,6 +40,10 @@
 		06120A472170A4F40006DB8A /* PersonalAccountsTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PersonalAccountsTableViewCell.swift; sourceTree = "<group>"; };
 		06120A4A2170AE390006DB8A /* MapViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MapViewController.swift; sourceTree = "<group>"; };
 		06120A4C2170B8E70006DB8A /* SettingsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsViewController.swift; sourceTree = "<group>"; };
+		0656EDB221748ACC0050A802 /* GoogleMapViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GoogleMapViewController.swift; sourceTree = "<group>"; };
+		0656EDB42174B1840050A802 /* CurrentPlaceViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CurrentPlaceViewController.swift; sourceTree = "<group>"; };
+		0656EDB821758F2B0050A802 /* MarkerModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MarkerModel.swift; sourceTree = "<group>"; };
+		0656EDBB2175CAFA0050A802 /* Request.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Request.swift; sourceTree = "<group>"; };
 		06D6062F21708B8D001F262A /* Gazprom.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Gazprom.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		06D6063221708B8D001F262A /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		06D6063421708B8D001F262A /* MainViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainViewController.swift; sourceTree = "<group>"; };
@@ -44,6 +53,9 @@
 		06D6063E21708B8E001F262A /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		06D60647217097C1001F262A /* NewsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NewsViewController.swift; sourceTree = "<group>"; };
 		06D6064A217098A3001F262A /* NewsTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NewsTableViewCell.swift; sourceTree = "<group>"; };
+		784C918D4ED3FFF956E041C6 /* Pods-Gazprom.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Gazprom.debug.xcconfig"; path = "Target Support Files/Pods-Gazprom/Pods-Gazprom.debug.xcconfig"; sourceTree = "<group>"; };
+		9A24B3CB606C242B2A906559 /* Pods-Gazprom.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Gazprom.release.xcconfig"; path = "Target Support Files/Pods-Gazprom/Pods-Gazprom.release.xcconfig"; sourceTree = "<group>"; };
+		ED4577290297AFB1B12B23FA /* Pods_Gazprom.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Gazprom.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -51,6 +63,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				37AFBFA7E55AB1DD7005000C /* Pods_Gazprom.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -81,8 +94,18 @@
 			isa = PBXGroup;
 			children = (
 				06120A4A2170AE390006DB8A /* MapViewController.swift */,
+				0656EDB221748ACC0050A802 /* GoogleMapViewController.swift */,
+				0656EDB42174B1840050A802 /* CurrentPlaceViewController.swift */,
 			);
 			path = Map;
+			sourceTree = "<group>";
+		};
+		0656EDBA2175CADC0050A802 /* API */ = {
+			isa = PBXGroup;
+			children = (
+				0656EDBB2175CAFA0050A802 /* Request.swift */,
+			);
+			path = API;
 			sourceTree = "<group>";
 		};
 		06D6062621708B8D001F262A = {
@@ -90,6 +113,8 @@
 			children = (
 				06D6063121708B8D001F262A /* Gazprom */,
 				06D6063021708B8D001F262A /* Products */,
+				C957A0A85DCBE0BE6962743B /* Pods */,
+				87F4F9638C5F8A9F38304AEE /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -104,6 +129,7 @@
 		06D6063121708B8D001F262A /* Gazprom */ = {
 			isa = PBXGroup;
 			children = (
+				0656EDBA2175CADC0050A802 /* API */,
 				06D6064621708BFE001F262A /* Controllers */,
 				06D6064521708BF7001F262A /* Views */,
 				06D6064421708BE8001F262A /* Models */,
@@ -116,6 +142,7 @@
 		06D6064421708BE8001F262A /* Models */ = {
 			isa = PBXGroup;
 			children = (
+				0656EDB821758F2B0050A802 /* MarkerModel.swift */,
 			);
 			path = Models;
 			sourceTree = "<group>";
@@ -153,6 +180,23 @@
 			path = News;
 			sourceTree = "<group>";
 		};
+		87F4F9638C5F8A9F38304AEE /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				ED4577290297AFB1B12B23FA /* Pods_Gazprom.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		C957A0A85DCBE0BE6962743B /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				784C918D4ED3FFF956E041C6 /* Pods-Gazprom.debug.xcconfig */,
+				9A24B3CB606C242B2A906559 /* Pods-Gazprom.release.xcconfig */,
+			);
+			path = Pods;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -160,9 +204,12 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 06D6064121708B8E001F262A /* Build configuration list for PBXNativeTarget "Gazprom" */;
 			buildPhases = (
+				B97E7C46462E064318122FB6 /* [CP] Check Pods Manifest.lock */,
 				06D6062B21708B8D001F262A /* Sources */,
 				06D6062C21708B8D001F262A /* Frameworks */,
 				06D6062D21708B8D001F262A /* Resources */,
+				DFFFD88F517FBF69862A5278 /* [CP] Copy Pods Resources */,
+				5EC74941AE6D5926FD93E523 /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -219,17 +266,99 @@
 		};
 /* End PBXResourcesBuildPhase section */
 
+/* Begin PBXShellScriptBuildPhase section */
+		5EC74941AE6D5926FD93E523 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-Gazprom/Pods-Gazprom-frameworks.sh",
+				"${BUILT_PRODUCTS_DIR}/Alamofire/Alamofire.framework",
+				"${BUILT_PRODUCTS_DIR}/AlamofireImage/AlamofireImage.framework",
+				"${BUILT_PRODUCTS_DIR}/AlamofireObjectMapper/AlamofireObjectMapper.framework",
+				"${BUILT_PRODUCTS_DIR}/ObjectMapper/ObjectMapper.framework",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Alamofire.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/AlamofireImage.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/AlamofireObjectMapper.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/ObjectMapper.framework",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-Gazprom/Pods-Gazprom-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		B97E7C46462E064318122FB6 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-Gazprom-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		DFFFD88F517FBF69862A5278 /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-Gazprom/Pods-Gazprom-resources.sh",
+				"${PODS_ROOT}/GoogleMaps/Maps/Frameworks/GoogleMaps.framework/Resources/GoogleMaps.bundle",
+				"${PODS_ROOT}/GooglePlacePicker/Frameworks/GooglePlacePicker.framework/Resources/GooglePlacePicker.bundle",
+				"${PODS_ROOT}/GooglePlaces/Frameworks/GooglePlaces.framework/Resources/GooglePlaces.bundle",
+			);
+			name = "[CP] Copy Pods Resources";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"${TARGET_BUILD_DIR}/${UNLOCALIZED_RESOURCES_FOLDER_PATH}/GoogleMaps.bundle",
+				"${TARGET_BUILD_DIR}/${UNLOCALIZED_RESOURCES_FOLDER_PATH}/GooglePlacePicker.bundle",
+				"${TARGET_BUILD_DIR}/${UNLOCALIZED_RESOURCES_FOLDER_PATH}/GooglePlaces.bundle",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-Gazprom/Pods-Gazprom-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
 /* Begin PBXSourcesBuildPhase section */
 		06D6062B21708B8D001F262A /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				0656EDB321748ACC0050A802 /* GoogleMapViewController.swift in Sources */,
 				06D60648217097C1001F262A /* NewsViewController.swift in Sources */,
 				06120A3A21709C3F0006DB8A /* NewsDescriptionViewController.swift in Sources */,
 				06D6063521708B8D001F262A /* MainViewController.swift in Sources */,
 				06120A482170A4F40006DB8A /* PersonalAccountsTableViewCell.swift in Sources */,
 				06120A3D2170A0CF0006DB8A /* PaymentsViewController.swift in Sources */,
 				06120A3F2170A0E30006DB8A /* PaymentsTableViewCell.swift in Sources */,
+				0656EDBC2175CAFA0050A802 /* Request.swift in Sources */,
+				0656EDB52174B1840050A802 /* CurrentPlaceViewController.swift in Sources */,
 				06120A462170A4D70006DB8A /* NewPersonalAccountsViewController.swift in Sources */,
 				06120A4B2170AE390006DB8A /* MapViewController.swift in Sources */,
 				06D6064B217098A3001F262A /* NewsTableViewCell.swift in Sources */,
@@ -237,6 +366,7 @@
 				06120A4D2170B8E70006DB8A /* SettingsViewController.swift in Sources */,
 				06120A412170A10E0006DB8A /* PayDescriptionsViewController.swift in Sources */,
 				06D6063321708B8D001F262A /* AppDelegate.swift in Sources */,
+				0656EDB921758F2B0050A802 /* MarkerModel.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -380,6 +510,7 @@
 		};
 		06D6064221708B8E001F262A /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 784C918D4ED3FFF956E041C6 /* Pods-Gazprom.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
@@ -398,6 +529,7 @@
 		};
 		06D6064321708B8E001F262A /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 9A24B3CB606C242B2A906559 /* Pods-Gazprom.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;

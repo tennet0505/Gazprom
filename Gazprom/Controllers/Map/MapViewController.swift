@@ -80,39 +80,7 @@ class MapViewController: UIViewController {
         return CLLocation(latitude: latitude, longitude: longitude)
         
     }
-    
-//    func getDirections() {
-//        guard let location = locationManager.location?.coordinate else { return }
-//
-//        let request = createDirectionRequest(from: location)
-//        let directions = MKDirections(request: request)
-//        directions.calculate { [weak self] (response, error) in
-//            guard let response = response else { return }
-//
-//            for rout in response.routes{
-//                self?.mapView.addOverlay(rout.polyline)
-//                self?.mapView.setVisibleMapRect(rout.polyline.boundingMapRect, animated: true)
-//            }
-//        }
-//
-//    }
-//
-//
-//    func createDirectionRequest(from coordinate: CLLocationCoordinate2D) -> MKDirections.Request{
-//        let destinationCoordinate = getCenterLocation(for: mapView).coordinate
-//        let startingLocation = MKPlacemark(coordinate: coordinate)
-//        let destination = MKPlacemark(coordinate: destinationCoordinate)
-//
-//        let request = MKDirections.Request()
-//        request.source = MKMapItem(placemark: startingLocation)
-//        request.destination =  MKMapItem(placemark: destination)
-//        request.transportType = .automobile
-//        request.requestsAlternateRoutes = true
-//
-//        return request
-//
-//    }
-//
+
     var placeMark: CLPlacemark?
     @IBAction func goButtonTapped(_ sender: Any) {
         guard let placeMark = placeMark  else { return }
