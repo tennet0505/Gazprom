@@ -68,3 +68,18 @@ class LogUrl: Mappable {
         url <- map["url"]
     }
 }
+class FAQModel: Mappable {
+    
+    var
+    question: String?,
+    answer: String?,
+    created_at: String?
+    
+    required init?(map: Map) {
+    }
+    func mapping(map: Map) {
+        question <- map["question"]
+        answer <- map["answer"]
+        created_at <- map["created_at"]
+    }
+}

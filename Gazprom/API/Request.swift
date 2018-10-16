@@ -69,4 +69,19 @@ class ApiClient {
                 }
         }
     }
+    
+    func getFAQ ( successHandler :@escaping ([FAQModel])->(),
+                   errorHandler   :@escaping (Error)->()){
+        
+        let URL = "\(serverUrl)/faqs.json"
+        
+        Alamofire.request(URL,
+                          headers: jsonHeaders)
+            .responseArray { (response: DataResponse<[FAQModel]>) in
+                
+                if let itemArray = response.result.value{
+                    successHandler(itemArray)
+                }
+        }
+    }
 }

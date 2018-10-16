@@ -20,6 +20,8 @@
 		0656EDB52174B1840050A802 /* CurrentPlaceViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0656EDB42174B1840050A802 /* CurrentPlaceViewController.swift */; };
 		0656EDB921758F2B0050A802 /* Model.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0656EDB821758F2B0050A802 /* Model.swift */; };
 		0656EDBC2175CAFA0050A802 /* Request.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0656EDBB2175CAFA0050A802 /* Request.swift */; };
+		0656EDBF2175F95C0050A802 /* FAQViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0656EDBE2175F95C0050A802 /* FAQViewController.swift */; };
+		0656EDC12175F9D90050A802 /* FAQTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0656EDC02175F9D90050A802 /* FAQTableViewCell.swift */; };
 		06D6063321708B8D001F262A /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 06D6063221708B8D001F262A /* AppDelegate.swift */; };
 		06D6063521708B8D001F262A /* MainViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 06D6063421708B8D001F262A /* MainViewController.swift */; };
 		06D6063821708B8D001F262A /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 06D6063621708B8D001F262A /* Main.storyboard */; };
@@ -44,6 +46,8 @@
 		0656EDB42174B1840050A802 /* CurrentPlaceViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CurrentPlaceViewController.swift; sourceTree = "<group>"; };
 		0656EDB821758F2B0050A802 /* Model.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Model.swift; sourceTree = "<group>"; };
 		0656EDBB2175CAFA0050A802 /* Request.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Request.swift; sourceTree = "<group>"; };
+		0656EDBE2175F95C0050A802 /* FAQViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FAQViewController.swift; sourceTree = "<group>"; };
+		0656EDC02175F9D90050A802 /* FAQTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FAQTableViewCell.swift; sourceTree = "<group>"; };
 		06D6062F21708B8D001F262A /* Gazprom.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Gazprom.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		06D6063221708B8D001F262A /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		06D6063421708B8D001F262A /* MainViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainViewController.swift; sourceTree = "<group>"; };
@@ -108,6 +112,15 @@
 			path = API;
 			sourceTree = "<group>";
 		};
+		0656EDBD2175F9420050A802 /* FAQ */ = {
+			isa = PBXGroup;
+			children = (
+				0656EDBE2175F95C0050A802 /* FAQViewController.swift */,
+				0656EDC02175F9D90050A802 /* FAQTableViewCell.swift */,
+			);
+			path = FAQ;
+			sourceTree = "<group>";
+		};
 		06D6062621708B8D001F262A = {
 			isa = PBXGroup;
 			children = (
@@ -166,6 +179,7 @@
 				06120A3B21709FBD0006DB8A /* Payments */,
 				06120A422170A4390006DB8A /* PersonalAccounts */,
 				06120A492170AE220006DB8A /* Map */,
+				0656EDBD2175F9420050A802 /* FAQ */,
 			);
 			path = Controllers;
 			sourceTree = "<group>";
@@ -358,6 +372,7 @@
 				06120A3D2170A0CF0006DB8A /* PaymentsViewController.swift in Sources */,
 				06120A3F2170A0E30006DB8A /* PaymentsTableViewCell.swift in Sources */,
 				0656EDBC2175CAFA0050A802 /* Request.swift in Sources */,
+				0656EDC12175F9D90050A802 /* FAQTableViewCell.swift in Sources */,
 				0656EDB52174B1840050A802 /* CurrentPlaceViewController.swift in Sources */,
 				06120A462170A4D70006DB8A /* NewPersonalAccountsViewController.swift in Sources */,
 				06120A4B2170AE390006DB8A /* MapViewController.swift in Sources */,
@@ -365,6 +380,7 @@
 				06120A442170A4BE0006DB8A /* PersonalAccountsViewController.swift in Sources */,
 				06120A4D2170B8E70006DB8A /* SettingsViewController.swift in Sources */,
 				06120A412170A10E0006DB8A /* PayDescriptionsViewController.swift in Sources */,
+				0656EDBF2175F95C0050A802 /* FAQViewController.swift in Sources */,
 				06D6063321708B8D001F262A /* AppDelegate.swift in Sources */,
 				0656EDB921758F2B0050A802 /* Model.swift in Sources */,
 			);
