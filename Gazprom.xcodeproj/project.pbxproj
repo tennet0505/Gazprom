@@ -18,7 +18,7 @@
 		06120A4D2170B8E70006DB8A /* SettingsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 06120A4C2170B8E70006DB8A /* SettingsViewController.swift */; };
 		0656EDB321748ACC0050A802 /* GoogleMapViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0656EDB221748ACC0050A802 /* GoogleMapViewController.swift */; };
 		0656EDB52174B1840050A802 /* CurrentPlaceViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0656EDB42174B1840050A802 /* CurrentPlaceViewController.swift */; };
-		0656EDB921758F2B0050A802 /* MarkerModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0656EDB821758F2B0050A802 /* MarkerModel.swift */; };
+		0656EDB921758F2B0050A802 /* Model.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0656EDB821758F2B0050A802 /* Model.swift */; };
 		0656EDBC2175CAFA0050A802 /* Request.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0656EDBB2175CAFA0050A802 /* Request.swift */; };
 		06D6063321708B8D001F262A /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 06D6063221708B8D001F262A /* AppDelegate.swift */; };
 		06D6063521708B8D001F262A /* MainViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 06D6063421708B8D001F262A /* MainViewController.swift */; };
@@ -42,7 +42,7 @@
 		06120A4C2170B8E70006DB8A /* SettingsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsViewController.swift; sourceTree = "<group>"; };
 		0656EDB221748ACC0050A802 /* GoogleMapViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GoogleMapViewController.swift; sourceTree = "<group>"; };
 		0656EDB42174B1840050A802 /* CurrentPlaceViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CurrentPlaceViewController.swift; sourceTree = "<group>"; };
-		0656EDB821758F2B0050A802 /* MarkerModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MarkerModel.swift; sourceTree = "<group>"; };
+		0656EDB821758F2B0050A802 /* Model.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Model.swift; sourceTree = "<group>"; };
 		0656EDBB2175CAFA0050A802 /* Request.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Request.swift; sourceTree = "<group>"; };
 		06D6062F21708B8D001F262A /* Gazprom.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Gazprom.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		06D6063221708B8D001F262A /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -142,7 +142,7 @@
 		06D6064421708BE8001F262A /* Models */ = {
 			isa = PBXGroup;
 			children = (
-				0656EDB821758F2B0050A802 /* MarkerModel.swift */,
+				0656EDB821758F2B0050A802 /* Model.swift */,
 			);
 			path = Models;
 			sourceTree = "<group>";
@@ -366,7 +366,7 @@
 				06120A4D2170B8E70006DB8A /* SettingsViewController.swift in Sources */,
 				06120A412170A10E0006DB8A /* PayDescriptionsViewController.swift in Sources */,
 				06D6063321708B8D001F262A /* AppDelegate.swift in Sources */,
-				0656EDB921758F2B0050A802 /* MarkerModel.swift in Sources */,
+				0656EDB921758F2B0050A802 /* Model.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

@@ -26,16 +26,21 @@ class MarkerModel: Mappable {
     }
     
 }
+class NewsModel: Mappable {
+    
+    var
+    title: String?,
+    description: String?,
+    created_at: String?
+    
+    required init?(map: Map) {
+    }
+    func mapping(map: Map) {
+        title <- map["title"]
+        description <- map["description"]
+        created_at <- map["created_at"]
+    }
+}
 
-//struct MarkerModel {
-//    var longitude: String?
-//    var latitude: String?
-//    var title: String?
-//
-//    init(latitude: String, longitude: String, title: String) {
-//        self.latitude = latitude
-//        self.longitude = longitude
-//        self.title = title
-//    }
-//}
+
 

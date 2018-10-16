@@ -10,6 +10,7 @@ import Foundation
 import Alamofire
 import ObjectMapper
 import AlamofireObjectMapper
+
 class ApiClient {
     
      let serverUrl = "https://puppit.spalmalo.com"
@@ -33,6 +34,20 @@ class ApiClient {
         Alamofire.request(URL,
                           headers: jsonHeaders)
             .responseArray { (response: DataResponse<[MarkerModel]>) in
+                
+                if let itemArray = response.result.value{
+                    successHandler(itemArray)
+                }
+        }
+    }
+    func getNews ( successHandler :@escaping ([NewsModel])->(),
+                      errorHandler   :@escaping (Error)->()){
+        
+        let URL = "\(serverUrl)/news.json"
+        
+        Alamofire.request(URL,
+                          headers: jsonHeaders)
+            .responseArray { (response: DataResponse<[NewsModel]>) in
                 
                 if let itemArray = response.result.value{
                     successHandler(itemArray)
