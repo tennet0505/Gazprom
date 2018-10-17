@@ -10,10 +10,19 @@ import UIKit
 
 class NewPersonalAccountsViewController: UIViewController {
 
+    @IBOutlet weak var lsTextField: UITextField!
+    @IBOutlet weak var cityLabel: UITextField!
+    @IBOutlet weak var addressLabel: UITextField!
+    @IBOutlet weak var buildLabel: UITextField!
+    @IBOutlet weak var flatLabel: UITextField!
+    
+    
     override func viewDidLoad() {
         super.viewDidLoad()
 
     }
     
-
+    @IBAction func buttonSave(_ sender: Any) {
+    }
+    
 }

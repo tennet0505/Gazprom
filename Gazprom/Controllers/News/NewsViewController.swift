@@ -71,6 +71,8 @@ extension NewsViewController: UITableViewDelegate, UITableViewDataSource{
         let cell = tableView.dequeueReusableCell(withIdentifier: "Cell", for: indexPath) as! NewsTableViewCell
         cell.labelTitle.text = arrayOfNews[indexPath.row].title
         cell.labelDate.text = arrayOfNews[indexPath.row].created_at
+        cell.labelTitle.textColor = #colorLiteral(red: 1.0, green: 1.0, blue: 1.0, alpha: 1.0)
+        cell.labelDate.textColor = #colorLiteral(red: 1.0, green: 1.0, blue: 1.0, alpha: 1.0)
         
         
         return cell

@@ -22,7 +22,7 @@
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                             </view>
-                            <imageView userInteractionEnabled="NO" alpha="0.80000000000000004" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="GazProm" translatesAutoresizingMaskIntoConstraints="NO" id="BoP-aq-u3C">
+                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Gazprom" translatesAutoresizingMaskIntoConstraints="NO" id="BoP-aq-u3C">
                                 <rect key="frame" x="16" y="0.0" width="343" height="667"/>
                             </imageView>
                         </subviews>
@@ -42,6 +42,6 @@
         </scene>
     </scenes>
     <resources>
-        <image name="GazProm" width="670" height="328"/>
+        <image name="Gazprom" width="296" height="145"/>
     </resources>
 </document>

@@ -22,6 +22,9 @@
 		0656EDBC2175CAFA0050A802 /* Request.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0656EDBB2175CAFA0050A802 /* Request.swift */; };
 		0656EDBF2175F95C0050A802 /* FAQViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0656EDBE2175F95C0050A802 /* FAQViewController.swift */; };
 		0656EDC12175F9D90050A802 /* FAQTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0656EDC02175F9D90050A802 /* FAQTableViewCell.swift */; };
+		0656EDC32176F2160050A802 /* HistoryViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0656EDC22176F2160050A802 /* HistoryViewController.swift */; };
+		0656EDC52176FADE0050A802 /* AccountsTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0656EDC42176FADE0050A802 /* AccountsTableViewCell.swift */; };
+		0656EDC72176FF940050A802 /* NewBillViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0656EDC62176FF940050A802 /* NewBillViewController.swift */; };
 		06D6063321708B8D001F262A /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 06D6063221708B8D001F262A /* AppDelegate.swift */; };
 		06D6063521708B8D001F262A /* MainViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 06D6063421708B8D001F262A /* MainViewController.swift */; };
 		06D6063821708B8D001F262A /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 06D6063621708B8D001F262A /* Main.storyboard */; };
@@ -48,6 +51,9 @@
 		0656EDBB2175CAFA0050A802 /* Request.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Request.swift; sourceTree = "<group>"; };
 		0656EDBE2175F95C0050A802 /* FAQViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FAQViewController.swift; sourceTree = "<group>"; };
 		0656EDC02175F9D90050A802 /* FAQTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FAQTableViewCell.swift; sourceTree = "<group>"; };
+		0656EDC22176F2160050A802 /* HistoryViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HistoryViewController.swift; sourceTree = "<group>"; };
+		0656EDC42176FADE0050A802 /* AccountsTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AccountsTableViewCell.swift; sourceTree = "<group>"; };
+		0656EDC62176FF940050A802 /* NewBillViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NewBillViewController.swift; sourceTree = "<group>"; };
 		06D6062F21708B8D001F262A /* Gazprom.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Gazprom.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		06D6063221708B8D001F262A /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		06D6063421708B8D001F262A /* MainViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainViewController.swift; sourceTree = "<group>"; };
@@ -90,6 +96,9 @@
 				06120A432170A4BE0006DB8A /* PersonalAccountsViewController.swift */,
 				06120A452170A4D70006DB8A /* NewPersonalAccountsViewController.swift */,
 				06120A472170A4F40006DB8A /* PersonalAccountsTableViewCell.swift */,
+				0656EDC22176F2160050A802 /* HistoryViewController.swift */,
+				0656EDC42176FADE0050A802 /* AccountsTableViewCell.swift */,
+				0656EDC62176FF940050A802 /* NewBillViewController.swift */,
 			);
 			path = PersonalAccounts;
 			sourceTree = "<group>";
@@ -366,11 +375,14 @@
 			files = (
 				0656EDB321748ACC0050A802 /* GoogleMapViewController.swift in Sources */,
 				06D60648217097C1001F262A /* NewsViewController.swift in Sources */,
+				0656EDC72176FF940050A802 /* NewBillViewController.swift in Sources */,
 				06120A3A21709C3F0006DB8A /* NewsDescriptionViewController.swift in Sources */,
+				0656EDC32176F2160050A802 /* HistoryViewController.swift in Sources */,
 				06D6063521708B8D001F262A /* MainViewController.swift in Sources */,
 				06120A482170A4F40006DB8A /* PersonalAccountsTableViewCell.swift in Sources */,
 				06120A3D2170A0CF0006DB8A /* PaymentsViewController.swift in Sources */,
 				06120A3F2170A0E30006DB8A /* PaymentsTableViewCell.swift in Sources */,
+				0656EDC52176FADE0050A802 /* AccountsTableViewCell.swift in Sources */,
 				0656EDBC2175CAFA0050A802 /* Request.swift in Sources */,
 				0656EDC12175F9D90050A802 /* FAQTableViewCell.swift in Sources */,
 				0656EDB52174B1840050A802 /* CurrentPlaceViewController.swift in Sources */,
