@@ -8,6 +8,7 @@
 
 import UIKit
 import Alamofire
+import SVProgressHUD
 
 
 class NewsViewController: UIViewController {
@@ -24,6 +25,7 @@ class NewsViewController: UIViewController {
     }
     
     func getOffices() {
+        SVProgressHUD.show()
         client.getNews(successHandler: { (value) in
             
             let array = value
@@ -32,9 +34,11 @@ class NewsViewController: UIViewController {
                
             }
             self.tableView.reloadData()
+            SVProgressHUD.dismiss()
             print(self.arrayOfNews)
         }) { (error) in
             print(error)
+            SVProgressHUD.dismiss()
         }
     }
     
@@ -71,8 +75,8 @@ extension NewsViewController: UITableViewDelegate, UITableViewDataSource{
         let cell = tableView.dequeueReusableCell(withIdentifier: "Cell", for: indexPath) as! NewsTableViewCell
         cell.labelTitle.text = arrayOfNews[indexPath.row].title
         cell.labelDate.text = arrayOfNews[indexPath.row].created_at
-        cell.labelTitle.textColor = #colorLiteral(red: 1.0, green: 1.0, blue: 1.0, alpha: 1.0)
-        cell.labelDate.textColor = #colorLiteral(red: 1.0, green: 1.0, blue: 1.0, alpha: 1.0)
+//        cell.labelTitle.textColor = #colorLiteral(red: 0.03137254902, green: 0.4078431373, blue: 0.6745098039, alpha: 1)
+//        cell.labelDate.textColor = #colorLiteral(red: 0.3529411765, green: 0.3529411765, blue: 0.3529411765, alpha: 1)
         
         
         return cell

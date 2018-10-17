@@ -37,7 +37,7 @@ class HistoryViewController: UIViewController {
         let vc = sb.instantiateViewController(withIdentifier: "NewBillViewController") as! NewBillViewController
         
         vc.label = accountNumberLbl
-        self.navigationController?.pushViewController(vc, animated: true)
+        self.navigationController?.pushViewController(vc, animated: false)
        
     
     }

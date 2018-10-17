@@ -8,6 +8,7 @@
 
 import UIKit
 import Alamofire
+import SVProgressHUD
 
 
 class FAQViewController: UIViewController {
@@ -29,6 +30,7 @@ class FAQViewController: UIViewController {
     }
     
     func getFAQ() {
+        SVProgressHUD.show()
         client.getFAQ(successHandler: { (value) in
             
             let array = value
@@ -37,9 +39,11 @@ class FAQViewController: UIViewController {
                 
             }
             self.tableView.reloadData()
+            SVProgressHUD.dismiss()
             print(self.arrayOfFAQ)
         }) { (error) in
             print(error)
+            SVProgressHUD.dismiss()
         }
     }
 }

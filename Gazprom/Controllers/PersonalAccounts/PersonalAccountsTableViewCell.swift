@@ -19,4 +19,19 @@ class PersonalAccountsTableViewCell: UITableViewCell {
       
     }
 
+    @IBAction func deleteButton(_ sender: UIButton) {
+       
+//        let enterAlert = UIAlertController(title: "Удалить лицевой счет?", message: "", preferredStyle: .alert
+//        )
+//
+//
+//        let action1 = UIAlertAction(title: "OK", style: .cancel, handler: nil)
+//        let action2 = UIAlertAction(title: "Отмена", style: .cancel, handler: nil)
+//
+//        enterAlert.addAction(action1)
+//        enterAlert.addAction(action2)
+        
+    //    .present(enterAlert, animated: true, completion: nil)
+        print("Tap delete")
+    }
 }

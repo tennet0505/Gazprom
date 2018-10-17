@@ -9,6 +9,7 @@
 import UIKit
 import Alamofire
 import AlamofireImage
+import SVProgressHUD
 
 
 class PaymentsViewController: UIViewController {
@@ -26,6 +27,7 @@ class PaymentsViewController: UIViewController {
     
     
     func getPaymentss() {
+        SVProgressHUD.show()
         client.getPayments(successHandler: { (value) in
             
             let array = value
@@ -34,9 +36,11 @@ class PaymentsViewController: UIViewController {
                 
             }
             self.tableView.reloadData()
+            SVProgressHUD.dismiss()
             print(self.arrayOfpayments)
         }) { (error) in
             print(error)
+            SVProgressHUD.dismiss()
         }
     }
 

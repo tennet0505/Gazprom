@@ -8,7 +8,7 @@
 
 import UIKit
 
-class NewBillViewController: UIViewController {
+class NewBillViewController: UIViewController, UITextFieldDelegate {
 
     @IBOutlet weak var viewPayment: UIView!
     @IBOutlet weak var acoountLabelonView: UILabel!
@@ -25,7 +25,10 @@ class NewBillViewController: UIViewController {
     }
     @IBAction func payButtonOnView(_ sender: Any) {
         
-       navigationController?.popViewController(animated: true)
+       navigationController?.popViewController(animated: false)
         
+    }
+    override func touchesBegan(_ touches: Set<UITouch>, with event: UIEvent?) {
+        view.endEditing(true)
     }
 }

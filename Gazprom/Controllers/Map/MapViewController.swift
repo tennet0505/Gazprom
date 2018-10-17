@@ -9,6 +9,7 @@
 import UIKit
 import MapKit
 import CoreLocation
+import SVProgressHUD
 
 class MapViewController: UIViewController {
 
