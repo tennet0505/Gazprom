@@ -24,9 +24,11 @@ class PersonalAccountsViewController: UIViewController {
     
     var arrayOfAccounts = [personalAccountsModel]()
     
-    let personal1 = personalAccountsModel(ls: "9999999", city: "Bishkek", address: "Panfilova", numberBuild: 143, numberFlat: 12)
-    let personal2 = personalAccountsModel(ls: "7777777", city: "New York", address: "Lincoln str", numberBuild: 22, numberFlat: 123)
-    let personal3 = personalAccountsModel(ls: "1111111", city: "London", address: "Baker str", numberBuild: 37, numberFlat: 12)
+    let personal1 = personalAccountsModel(ls: "92324999-11", city: "Bishkek", address: "Panfilova", numberBuild: 143, numberFlat: 12)
+    let personal2 = personalAccountsModel(ls: "4341777-22", city: "New York", address: "Lincoln str", numberBuild: 22, numberFlat: 123)
+    let personal3 = personalAccountsModel(ls: "1121311-33", city: "London", address: "Baker str", numberBuild: 37, numberFlat: 66)
+    let personal4 = personalAccountsModel(ls: "11212351-33", city: "Бишкек", address: "Советская", numberBuild: 123, numberFlat: 34)
+    let personal5 = personalAccountsModel(ls: "2434311-33", city: "Токмак", address: "Чуй", numberBuild: 221, numberFlat: 3)
     var personalNew = personalAccountsModel()
     
 
@@ -40,7 +42,7 @@ class PersonalAccountsViewController: UIViewController {
     }
     override func viewDidLoad() {
         super.viewDidLoad()
-        arrayOfAccounts = [personal1, personal2, personal3]
+        arrayOfAccounts = [personal1, personal2, personal3, personal4, personal5]
       
     }
     

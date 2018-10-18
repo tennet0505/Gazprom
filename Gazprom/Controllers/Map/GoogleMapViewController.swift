@@ -100,7 +100,7 @@ extension GoogleMapViewController: CLLocationManagerDelegate {
         let userLocation = locations.last
         let center = CLLocationCoordinate2D(latitude: userLocation!.coordinate.latitude, longitude: userLocation!.coordinate.longitude)
         
-        let camera = GMSCameraPosition.camera(withLatitude: userLocation!.coordinate.latitude, longitude: userLocation!.coordinate.longitude, zoom: 15);
+        let camera = GMSCameraPosition.camera(withLatitude: userLocation!.coordinate.latitude, longitude: userLocation!.coordinate.longitude, zoom: 11);
         mapView.camera = camera
         mapView.isMyLocationEnabled = true
         fromLocation = center

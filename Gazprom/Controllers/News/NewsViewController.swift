@@ -17,15 +17,20 @@ class NewsViewController: UIViewController {
      let client = ApiClient()
     @IBOutlet weak var tableView: UITableView!
     
+    
+    override func viewWillAppear(_ animated: Bool) {
+        super.viewWillAppear(animated)
+        
+         getOffices()
+    }
+    
     override func viewDidLoad() {
         super.viewDidLoad()
-
-         getOffices()
-       
     }
     
     func getOffices() {
         SVProgressHUD.show()
+        arrayOfNews.removeAll()
         client.getNews(successHandler: { (value) in
             
             let array = value

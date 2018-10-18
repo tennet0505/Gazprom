@@ -19,14 +19,21 @@ class PaymentsViewController: UIViewController {
     let client = ApiClient()
     
     @IBOutlet weak var tableView: UITableView!
+    
+    override func viewWillAppear(_ animated: Bool) {
+        super.viewWillAppear(animated)
+        
+        getPaymentss()
+        
+    }
     override func viewDidLoad() {
         super.viewDidLoad()
 
-        getPaymentss()
     }
     
     
     func getPaymentss() {
+        arrayOfpayments.removeAll()
         SVProgressHUD.show()
         client.getPayments(successHandler: { (value) in
             
