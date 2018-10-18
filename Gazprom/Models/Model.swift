@@ -84,3 +84,26 @@ class FAQModel: Mappable {
     }
 }
 
+class PersonalModel: Mappable {
+    
+    var
+    account: Int?,
+    city: String?,
+    address: String?,
+    house_number: String?,
+    flat_number: String?
+    
+    required init?(map: Map) {
+    }
+    func mapping(map: Map) {
+        account <- map["account"]
+        city <- map["city"]
+        house_number <- map["house_number"]
+        address <- map["address"]
+        flat_number <- map["flat_number"]
+    }
+}
+
+
+
+

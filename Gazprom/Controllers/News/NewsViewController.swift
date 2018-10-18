@@ -12,20 +12,23 @@ import SVProgressHUD
 
 
 class NewsViewController: UIViewController {
-
-     var arrayOfNews = [NewsModel]()
-     let client = ApiClient()
+    
+    var arrayOfNews = [NewsModel]()
+    var personal = [PersonalModel]()
+    let client = ApiClient()
     @IBOutlet weak var tableView: UITableView!
     
     
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
         
-         getOffices()
+        getOffices()
     }
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        
+       
     }
     
     func getOffices() {
@@ -46,6 +49,25 @@ class NewsViewController: UIViewController {
             SVProgressHUD.dismiss()
         }
     }
+    
+//    func getPersonal() {
+//        SVProgressHUD.show()
+//        
+//        client.getPersonal(successHandler: { (value) in
+//            
+//            let array = value
+//            for personal in array {
+//                self.personal.append(personal)
+//                
+//            }
+//            SVProgressHUD.dismiss()
+//            print(self.personal)
+//            
+//        }) { (error) in
+//            print(error)
+//            SVProgressHUD.dismiss()
+//        }
+//    }
     
     func formatDate(date: String) -> String {
        

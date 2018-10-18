@@ -13,12 +13,12 @@ import AlamofireObjectMapper
 
 class ApiClient {
     
-     let serverUrl = "https://puppit.spalmalo.com"
+    let serverUrl = "https://puppit.spalmalo.com"
     
-     var jsonHeaders:HTTPHeaders{
+    var jsonHeaders:HTTPHeaders{
         return ["Content-Type":"application/json"]
     }
-     func newError(_ name:String) -> Error {
+    func newError(_ name:String) -> Error {
         let errorDomain = "com.spalmalo.Promzona-space"
         let userInfo = [NSLocalizedFailureReasonErrorKey: "error in \(name)"]
         let returnError = NSError(domain: errorDomain, code: 1, userInfo: userInfo)
@@ -41,7 +41,7 @@ class ApiClient {
         }
     }
     func getNews ( successHandler :@escaping ([NewsModel])->(),
-                      errorHandler   :@escaping (Error)->()){
+                   errorHandler   :@escaping (Error)->()){
         
         let URL = "\(serverUrl)/news.json"
         
@@ -56,7 +56,7 @@ class ApiClient {
     }
     
     func getPayments ( successHandler :@escaping ([PaymentModel])->(),
-                   errorHandler   :@escaping (Error)->()){
+                       errorHandler   :@escaping (Error)->()){
         
         let URL = "\(serverUrl)/payments.json"
         
@@ -71,7 +71,7 @@ class ApiClient {
     }
     
     func getFAQ ( successHandler :@escaping ([FAQModel])->(),
-                   errorHandler   :@escaping (Error)->()){
+                  errorHandler   :@escaping (Error)->()){
         
         let URL = "\(serverUrl)/faqs.json"
         
@@ -84,7 +84,22 @@ class ApiClient {
                 }
         }
     }
-   
+    
+    func getPersonal( successHandler :@escaping ([PersonalModel])->(),
+                  errorHandler   :@escaping (Error)->()){
+        
+        let URL = "\(serverUrl)/personal_accounts.json"
+        
+        Alamofire.request(URL,
+                          headers: jsonHeaders)
+            .responseArray { (response: DataResponse<[PersonalModel]>) in
+                
+                if let itemArray = response.result.value{
+                    successHandler(itemArray)
+                }
+        }
+    }
+    
     func getCountries ( url: String,
                         successHandler :@escaping (Dictionary<String, [String]>)->(),
                         errorHandler   :@escaping (Error)->()){
@@ -106,7 +121,7 @@ class ApiClient {
         
         let URL = "\(serverUrl)/\(url)"
         Alamofire.request(URL, parameters: params, headers: jsonHeaders).responseJSON  { (response) in
-              print(response.result.value)
+            print(response.result.value)
             
             if let itemArray = response.result.value{
                 successHandler(itemArray as! Dictionary<String, [String]> )
@@ -114,9 +129,9 @@ class ApiClient {
         }
     }
     func postRequestStreets (  url: String,
-                        params: [String: String],
-                        successHandler :@escaping (Dictionary<String, [String]>)->(),
-                        errorHandler   :@escaping (Error)->()){
+                               params: [String: String],
+                               successHandler :@escaping (Dictionary<String, [String]>)->(),
+                               errorHandler   :@escaping (Error)->()){
         
         let URL = "\(serverUrl)/\(url)"
         Alamofire.request(URL, parameters: params, headers: jsonHeaders).responseJSON  { (response) in
