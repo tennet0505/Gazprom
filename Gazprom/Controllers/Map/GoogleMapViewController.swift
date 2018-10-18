@@ -46,16 +46,46 @@ class GoogleMapViewController: UIViewController {
         mapView.settings.myLocationButton = true
         
         let button = UIButton(frame: view.frame)
-        let btnImage = UIImage(named: "Map")
+        let btnImage = UIImage(named: "mapOneWay")
         button.setImage(btnImage, for: .normal)
         button.frame = CGRect(x:260, y: 65, width: 48, height: 41)
         button.addTarget(self, action: #selector(GoogleMapViewController.addDirectionOnMap(sender:)), for: .touchUpInside)
 
+        let buttonShare = UIButton(frame: view.frame)
+        let btnImageShare = UIImage(named: "Map")
+        buttonShare.setImage(btnImageShare, for: .normal)
+        buttonShare.frame = CGRect(x:260, y: 400, width: 48, height: 41)
+        buttonShare.addTarget(self, action: #selector(GoogleMapViewController.ShareMap(sender:)), for: .touchUpInside)
+        
         view.addSubview(self.mapView)
+        view.addSubview(buttonShare)
         view.addSubview(button)
         mapView.delegate = self
         
     }
+    
+    @objc func ShareMap(sender: UIButton)  {
+        print("TapShare")
+        
+        let alert = UIAlertController(title: "Открыть", message: "", preferredStyle: .actionSheet)
+        let action1 = UIAlertAction(title: "App Maps", style: .default) { (action) in
+            print("openAppMap")
+            UIApplication.shared.openURL(NSURL(string: "http://maps.apple.com/maps?saddr=\(self.fromLocation.latitude),\(self.fromLocation.longitude)&daddr=\(self.toLocation.latitude),\(self.toLocation.longitude)")! as URL)
+           
+        }
+        let action2 = UIAlertAction(title: "Google Maps", style: .default) { (action) in
+            
+            UIApplication.shared.openURL(NSURL(string:
+                "comgooglemaps://?saddr=&daddr=\(self.toLocation.latitude),\(self.toLocation.longitude)&directionsmode=driving")! as URL)
+        }
+        let action3 = UIAlertAction(title: "Отмена", style: .cancel, handler: nil)
+        alert.addAction(action1)
+        alert.addAction(action2)
+        alert.addAction(action3)
+        present(alert, animated: true, completion: nil)
+    }
+    
+
     
     @objc func addDirectionOnMap(sender: UIButton)  {
         print("Tap")
@@ -170,6 +200,9 @@ extension GoogleMapViewController: CLLocationManagerDelegate {
             }
         })
         task.resume()
+    }
+    override func touchesBegan(_ touches: Set<UITouch>, with event: UIEvent?) {
+        view.endEditing(true)
     }
 }
 
