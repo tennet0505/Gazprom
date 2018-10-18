@@ -84,4 +84,47 @@ class ApiClient {
                 }
         }
     }
+   
+    func getCountries ( url: String,
+                        successHandler :@escaping (Dictionary<String, [String]>)->(),
+                        errorHandler   :@escaping (Error)->()){
+        
+        let URL = "\(serverUrl)/\(url)"
+        Alamofire.request(URL, headers: jsonHeaders).responseJSON { (response) in
+            //  print(response.result.value)
+            
+            if let itemArray = response.result.value{
+                successHandler(itemArray as! Dictionary<String, [String]> )
+            }
+        }
+    }
+    
+    func postRequest (  url: String,
+                        params: [String: String],
+                        successHandler :@escaping (Dictionary<String, [String]>)->(),
+                        errorHandler   :@escaping (Error)->()){
+        
+        let URL = "\(serverUrl)/\(url)"
+        Alamofire.request(URL, parameters: params, headers: jsonHeaders).responseJSON  { (response) in
+              print(response.result.value)
+            
+            if let itemArray = response.result.value{
+                successHandler(itemArray as! Dictionary<String, [String]> )
+            }
+        }
+    }
+    func postRequestStreets (  url: String,
+                        params: [String: String],
+                        successHandler :@escaping (Dictionary<String, [String]>)->(),
+                        errorHandler   :@escaping (Error)->()){
+        
+        let URL = "\(serverUrl)/\(url)"
+        Alamofire.request(URL, parameters: params, headers: jsonHeaders).responseJSON  { (response) in
+            print(response.result.value)
+            
+            if let itemArray = response.result.value{
+                successHandler(itemArray as! Dictionary<String, [String]> )
+            }
+        }
+    }
 }

@@ -83,3 +83,4 @@ class FAQModel: Mappable {
         created_at <- map["created_at"]
     }
 }
+
