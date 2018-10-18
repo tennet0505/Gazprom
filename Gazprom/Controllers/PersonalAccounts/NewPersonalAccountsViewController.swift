@@ -116,6 +116,7 @@ extension NewPersonalAccountsViewController: UIPickerViewDelegate,UIPickerViewDa
     @objc func doneButton(_ sender: UIBarButtonItem)
     {
         
+        
 //        countrySelected = teamSelected
 //        idProffi = ProffiSelected
 //        self.view.endEditing(true)
@@ -170,6 +171,8 @@ extension NewPersonalAccountsViewController: UIPickerViewDelegate,UIPickerViewDa
                 countryLabel.text = arrayOfCountries[row]
                 countrySelected = countryLabel.text ?? "No Country selected"
                 postRequest(url: "cities", countrySelected: self.countrySelected)
+                cityLabel.text = ""
+                addressLabel.text = ""
             }
             
         } else if pickerView.tag == 1 {
@@ -177,6 +180,7 @@ extension NewPersonalAccountsViewController: UIPickerViewDelegate,UIPickerViewDa
                 cityLabel.text = arrayOfCities[row]
                 citySelected = cityLabel.text ?? "No City selected"
                 postRequestStreets(url: "addresses", citySelected: self.citySelected)
+                addressLabel.text = ""
             }
             
         } else if pickerView.tag == 2 {
