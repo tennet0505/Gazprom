@@ -21,7 +21,7 @@ class NewPersonalAccountsViewController: UIViewController,UITextFieldDelegate {
     let client = ApiClient()
     
     var arrayOfAccounts = [PersonalModel]()
-  //  var personal = PersonalModel()
+    
     var arrayOfCountries = ["Выберите страну:"]
     var arrayOfCities = ["Выберите город:"]
     var arrayOfSreets = ["Выберите улицу:"]
@@ -33,8 +33,10 @@ class NewPersonalAccountsViewController: UIViewController,UITextFieldDelegate {
     var citySelected = ""
     var streetSelected = ""
     
+    let reloadVC = PersonalAccountsViewController()
     
     
+   
     override func viewDidLoad() {
         super.viewDidLoad()
         
@@ -58,25 +60,35 @@ class NewPersonalAccountsViewController: UIViewController,UITextFieldDelegate {
    
     @IBAction func buttonSave(_ sender: Any) {
     
-//        personal.ls = lsTextField.text
-//        personal.city = cityLabel.text
-//        personal.address = addressLabel.text
-//        personal.numberBuild = Int(buildLabel.text ?? "0")
-//        personal.numberFlat = Int(flatLabel.text ?? "0")
-      
-//        arrayOfAccounts.append(personal)
-       
         
+        let params: [String : String] = ["account": lsTextField.text ?? "NoName",
+                      "city": cityLabel.text ?? "NoName",
+                      "address": addressLabel.text ?? "NoName",
+                      "house_number": buildLabel.text ?? "NoName",
+                      "flat_number": flatLabel.text ?? "NoName"]
+        
+        let par: [String:[String:String]] = ["personal_account":params]
+        
+        postNewAccounts(paramas: par)
+       
 //        let sb = UIStoryboard(name: "Main", bundle: nil)
 //        let vc = sb.instantiateViewController(withIdentifier: "PersonalAccountsViewController") as! PersonalAccountsViewController
 //        vc.arrayOfAccounts = arrayOfAccounts
-        
-        
-        
-        
+        reloadVC.reloadController()
         navigationController?.popViewController(animated: true)
-     //   performSegue(withIdentifier: "segueToPersonalAccounts", sender: self)
         
+    }
+    
+    
+    func postNewAccounts(paramas: [String:[String:String]] ) {
+        
+        client.postNewAccount(url: "personal_accounts", params: paramas, successHandler: { (response) in
+            print(response)
+       
+        
+        }) { (error) in
+            print(error)
+        }
     }
     
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {

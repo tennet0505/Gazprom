@@ -23,18 +23,16 @@ class PersonalAccountsViewController: UIViewController {
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
         
+        getPersonal()
+        tableView.reloadData()
     }
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        getPersonal()
-        tableView.dataSource = self
-        tableView.delegate = self
-        
     }
     func getPersonal() {
         SVProgressHUD.show()
-        
+        arrayOfAccounts.removeAll()
         client.getPersonal(successHandler: { (value) in
             
             let array = value
@@ -49,6 +47,14 @@ class PersonalAccountsViewController: UIViewController {
             print(error)
             SVProgressHUD.dismiss()
         }
+    }
+    
+    func reloadController(){
+        let storyboard = UIStoryboard(name: "Main", bundle: nil)
+        let vc = storyboard.instantiateViewController(withIdentifier: "PersonalAccountsViewController") as! PersonalAccountsViewController
+        
+        self.present(vc, animated: false, completion: nil)
+        
     }
     
     @IBAction func addNewBillButton(_ sender: Any) {
@@ -72,8 +78,10 @@ extension PersonalAccountsViewController: UITableViewDelegate, UITableViewDataSo
     
     public func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: "Cell", for: indexPath) as! PersonalAccountsTableViewCell
-        
-        cell.label.text = arrayOfAccounts[indexPath.row].address
+        if let account = arrayOfAccounts[indexPath.row].account{
+            cell.label.text = "\(account)"
+        }
+       
         
         return cell
     }

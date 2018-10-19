@@ -142,4 +142,27 @@ class ApiClient {
             }
         }
     }
+    
+    func postNewAccount (url: String,
+                         params: [String: [String:String]],
+                         successHandler :@escaping (Dictionary<String, [String]>)->(),
+                         errorHandler   :@escaping (Error)->()){
+        
+        let URL = "\(serverUrl)/\(url)"
+        Alamofire.request(
+            URL,
+            method: .post,
+            parameters: params,
+            encoding: JSONEncoding.default,
+            headers:jsonHeaders
+            ).responseJSON  { (response) in
+            print(response.result.value)
+            
+            if let itemArray = response.result.value{
+                successHandler(itemArray as!  Dictionary<String, [String]>)
+            }
+        }
+    }
+    
+   
 }
