@@ -24,7 +24,7 @@ class CurrentPlaceViewController: UIViewController {
  
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         if segue.identifier == "unwindToMain" {
-            if let nextViewController = segue.destination as? GoogleMapViewController {
+            if segue.destination is GoogleMapViewController {
              //   nextViewController.selectedPlace = selectedPlace
             }
         }

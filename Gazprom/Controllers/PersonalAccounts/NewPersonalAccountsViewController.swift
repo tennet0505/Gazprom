@@ -70,22 +70,19 @@ class NewPersonalAccountsViewController: UIViewController,UITextFieldDelegate {
         let par: [String:[String:String]] = ["personal_account":params]
         
         postNewAccounts(paramas: par)
-       
-//        let sb = UIStoryboard(name: "Main", bundle: nil)
-//        let vc = sb.instantiateViewController(withIdentifier: "PersonalAccountsViewController") as! PersonalAccountsViewController
-//        vc.arrayOfAccounts = arrayOfAccounts
         reloadVC.reloadController()
+
         navigationController?.popViewController(animated: true)
-        
+
     }
     
     
     func postNewAccounts(paramas: [String:[String:String]] ) {
         
         client.postNewAccount(url: "personal_accounts", params: paramas, successHandler: { (response) in
+            
             print(response)
-       
-        
+            
         }) { (error) in
             print(error)
         }
@@ -96,7 +93,6 @@ class NewPersonalAccountsViewController: UIViewController,UITextFieldDelegate {
         if segue.identifier == "segueToPersonalAccounts",
             let vc = segue.destination as? PersonalAccountsViewController{
             vc.arrayOfAccounts = arrayOfAccounts
-          
         }
     }
     
@@ -105,7 +101,7 @@ class NewPersonalAccountsViewController: UIViewController,UITextFieldDelegate {
     }
     
 }
-extension NewPersonalAccountsViewController: UIPickerViewDelegate,UIPickerViewDataSource{
+extension NewPersonalAccountsViewController: UIPickerViewDelegate, UIPickerViewDataSource{
     
     
     func createToolbar(){
@@ -122,24 +118,12 @@ extension NewPersonalAccountsViewController: UIPickerViewDelegate,UIPickerViewDa
         cityLabel.inputAccessoryView = toolbar
     }
     
-    
-    @objc func cancelButton(_ sender: UIBarButtonItem)
-    {
+    @objc func cancelButton(_ sender: UIBarButtonItem){
         self.view.endEditing(true)
         
     }
-    @objc func doneButton(_ sender: UIBarButtonItem)
-    {
-        
-        
-//        countrySelected = teamSelected
-//        idProffi = ProffiSelected
-//        self.view.endEditing(true)
-//        print("done button pressed")
-//        print("id of Team: \(teamSelected)")
-//        print("id of Proffi: \(ProffiSelected)")
-        
-        // Send Data team on server for add data team
+    @objc func doneButton(_ sender: UIBarButtonItem){
+    
     }
     func numberOfComponents(in pickerView: UIPickerView) -> Int {
         return 1
@@ -269,6 +253,4 @@ extension NewPersonalAccountsViewController{
             SVProgressHUD.dismiss()
         }
     }
-    
-    
 }

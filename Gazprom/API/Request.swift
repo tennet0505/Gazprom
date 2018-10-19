@@ -121,7 +121,7 @@ class ApiClient {
         
         let URL = "\(serverUrl)/\(url)"
         Alamofire.request(URL, parameters: params, headers: jsonHeaders).responseJSON  { (response) in
-            print(response.result.value)
+            print(response.result.value ?? " ")
             
             if let itemArray = response.result.value{
                 successHandler(itemArray as! Dictionary<String, [String]> )
@@ -135,7 +135,7 @@ class ApiClient {
         
         let URL = "\(serverUrl)/\(url)"
         Alamofire.request(URL, parameters: params, headers: jsonHeaders).responseJSON  { (response) in
-            print(response.result.value)
+            print(response.result.value ?? " ")
             
             if let itemArray = response.result.value{
                 successHandler(itemArray as! Dictionary<String, [String]> )
@@ -156,7 +156,7 @@ class ApiClient {
             encoding: JSONEncoding.default,
             headers:jsonHeaders
             ).responseJSON  { (response) in
-            print(response.result.value)
+                print(response.result.value ?? "")
             
             if let itemArray = response.result.value{
                 successHandler(itemArray as!  Dictionary<String, [String]>)

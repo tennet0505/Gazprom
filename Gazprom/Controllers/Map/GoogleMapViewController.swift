@@ -70,14 +70,22 @@ class GoogleMapViewController: UIViewController {
         let alert = UIAlertController(title: "Открыть", message: "", preferredStyle: .actionSheet)
         let action1 = UIAlertAction(title: "App Maps", style: .default) { (action) in
             print("openAppMap")
-            UIApplication.shared.openURL(NSURL(string: "http://maps.apple.com/maps?saddr=\(self.fromLocation.latitude),\(self.fromLocation.longitude)&daddr=\(self.toLocation.latitude),\(self.toLocation.longitude)")! as URL)
-           
+
+            if let url = URL(string: "http://maps.apple.com/maps?saddr=\(self.fromLocation.latitude),\(self.fromLocation.longitude)&daddr=\(self.toLocation.latitude),\(self.toLocation.longitude)"){
+                
+                UIApplication.shared.open(url, options: [:], completionHandler: nil)
+                
+            }
         }
         let action2 = UIAlertAction(title: "Google Maps", style: .default) { (action) in
             
-            UIApplication.shared.openURL(NSURL(string:
-                "comgooglemaps://?saddr=&daddr=\(self.toLocation.latitude),\(self.toLocation.longitude)&directionsmode=driving")! as URL)
+            if let url = URL(string: "comgooglemaps://?saddr=&daddr=\(self.toLocation.latitude),\(self.toLocation.longitude)&directionsmode=driving"){
+                
+                UIApplication.shared.open(url, options: [:], completionHandler: nil)
+                
+            }
         }
+        
         let action3 = UIAlertAction(title: "Отмена", style: .cancel, handler: nil)
         alert.addAction(action1)
         alert.addAction(action2)
@@ -112,9 +120,9 @@ class GoogleMapViewController: UIViewController {
             let array = value
             for office in array {
                 self.markers.append(office)
-                print(office.latitude)
-                print(office.longitude)
-                print(office.title)
+                print(office.latitude as Any)
+                print(office.longitude as Any)
+                print(office.title as Any)
             }
             self.addMarkerPoints(markers: self.markers)
         }) { (error) in
