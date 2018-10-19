@@ -20,7 +20,7 @@ class HistoryViewController: UIViewController {
     
    
     
-    var arrayOfAccounts = [personalAccountsModel]()
+    var arrayOfAccounts = [PersonalModel]()
     
     
     override func viewDidLoad() {

@@ -20,8 +20,8 @@ class NewPersonalAccountsViewController: UIViewController,UITextFieldDelegate {
     
     let client = ApiClient()
     
-    var arrayOfAccounts = [personalAccountsModel]()
-    var personal = personalAccountsModel()
+    var arrayOfAccounts = [PersonalModel]()
+  //  var personal = PersonalModel()
     var arrayOfCountries = ["Выберите страну:"]
     var arrayOfCities = ["Выберите город:"]
     var arrayOfSreets = ["Выберите улицу:"]
@@ -58,18 +58,21 @@ class NewPersonalAccountsViewController: UIViewController,UITextFieldDelegate {
    
     @IBAction func buttonSave(_ sender: Any) {
     
-        personal.ls = lsTextField.text
-        personal.city = cityLabel.text
-        personal.address = addressLabel.text
-        personal.numberBuild = Int(buildLabel.text ?? "0")
-        personal.numberFlat = Int(flatLabel.text ?? "0")
+//        personal.ls = lsTextField.text
+//        personal.city = cityLabel.text
+//        personal.address = addressLabel.text
+//        personal.numberBuild = Int(buildLabel.text ?? "0")
+//        personal.numberFlat = Int(flatLabel.text ?? "0")
       
-        arrayOfAccounts.append(personal)
+//        arrayOfAccounts.append(personal)
        
         
-        let sb = UIStoryboard(name: "Main", bundle: nil)
-        let vc = sb.instantiateViewController(withIdentifier: "PersonalAccountsViewController") as! PersonalAccountsViewController
-        vc.arrayOfAccounts = arrayOfAccounts
+//        let sb = UIStoryboard(name: "Main", bundle: nil)
+//        let vc = sb.instantiateViewController(withIdentifier: "PersonalAccountsViewController") as! PersonalAccountsViewController
+//        vc.arrayOfAccounts = arrayOfAccounts
+        
+        
+        
         
         navigationController?.popViewController(animated: true)
      //   performSegue(withIdentifier: "segueToPersonalAccounts", sender: self)

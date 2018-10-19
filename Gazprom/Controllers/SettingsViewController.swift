@@ -43,7 +43,7 @@ class SettingsViewController: UIViewController {
                 
             }
             if self.personal.count > 0{
-                self.fullAddress = self.personal[0].city! + self.personal[0].address! + self.personal[0].house_number! + self.personal[0].flat_number!
+                self.fullAddress = self.personal[0].city! + ", " + self.personal[0].address! + " " + self.personal[0].house_number! + "-" + self.personal[0].flat_number!
                 self.adressTextFields.text = self.fullAddress
                 if let account = self.personal[0].account{
                     self.nameTextField.text = "\(String(account))"
