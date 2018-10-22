@@ -82,6 +82,7 @@ class NewPersonalAccountsViewController: UIViewController,UITextFieldDelegate {
         client.postNewAccount(url: "personal_accounts", params: paramas, successHandler: { (response) in
             
             print(response)
+            self.reloadVC.reloadController()
             
         }) { (error) in
             print(error)
@@ -172,6 +173,8 @@ extension NewPersonalAccountsViewController: UIPickerViewDelegate, UIPickerViewD
                 postRequest(url: "cities", countrySelected: self.countrySelected)
                 cityLabel.text = ""
                 addressLabel.text = ""
+                buildLabel.text = ""
+                flatLabel.text = ""
             }
             
         } else if pickerView.tag == 1 {
@@ -180,11 +183,15 @@ extension NewPersonalAccountsViewController: UIPickerViewDelegate, UIPickerViewD
                 citySelected = cityLabel.text ?? "No City selected"
                 postRequestStreets(url: "addresses", citySelected: self.citySelected)
                 addressLabel.text = ""
+                buildLabel.text = ""
+                flatLabel.text = ""
             }
             
         } else if pickerView.tag == 2 {
             if row != 0{
                 addressLabel.text = arrayOfSreets[row]
+                buildLabel.text = ""
+                flatLabel.text = ""
             }
         }
     }
