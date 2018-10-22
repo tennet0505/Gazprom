@@ -831,7 +831,7 @@
                                                 <color key="textColor" red="0.031372549020000001" green="0.40784313729999999" blue="0.67450980390000004" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                 <nil key="highlightedColor"/>
                                             </label>
-                                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Номер счета" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="Kaq-vN-Cmw">
+                                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Введите новый номер счета" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="Kaq-vN-Cmw">
                                                 <rect key="frame" x="29" y="51" width="325" height="30"/>
                                                 <nil key="textColor"/>
                                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
@@ -939,6 +939,7 @@
                         <outlet property="flatLabel" destination="JYa-Kb-vLj" id="LhR-dy-Nwg"/>
                         <outlet property="lsTextField" destination="Kaq-vN-Cmw" id="g7R-te-fjR"/>
                         <segue destination="l9M-43-J0Q" kind="show" identifier="segueToPersonalAccounts" id="JT1-M6-paq"/>
+                        <segue destination="dwq-Tr-T8Q" kind="show" id="xvN-D3-N7C"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Hyb-tJ-f5Z" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -954,7 +955,7 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <tableView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="ZDW-Q5-PJ6">
-                                <rect key="frame" x="30" y="184" width="315" height="483"/>
+                                <rect key="frame" x="30" y="228" width="315" height="390"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <prototypes>
                                     <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="Cell" id="K2P-Je-xa1" customClass="AccountsTableViewCell" customModule="Gazprom" customModuleProvider="target">
@@ -996,13 +997,13 @@
                                 </connections>
                             </tableView>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="История платежей:" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="JPF-hz-zXk">
-                                <rect key="frame" x="91.666666666666671" y="142" width="191.66666666666663" height="24"/>
+                                <rect key="frame" x="91.666666666666671" y="186" width="191.66666666666663" height="24"/>
                                 <fontDescription key="fontDescription" type="boldSystem" pointSize="20"/>
                                 <color key="textColor" red="0.031372549020000001" green="0.40784313729999999" blue="0.67450980390000004" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="nGw-Ak-980">
-                                <rect key="frame" x="30" y="708" width="315" height="30"/>
+                                <rect key="frame" x="30" y="659" width="315" height="30"/>
                                 <color key="backgroundColor" red="0.031372549020000001" green="0.40784313729999999" blue="0.67450980390000004" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <state key="normal" title=" Добавить показания счетчика">
                                     <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
@@ -1017,7 +1018,7 @@
                                 </connections>
                             </button>
                             <stackView opaque="NO" contentMode="scaleToFill" spacing="10" translatesAutoresizingMaskIntoConstraints="NO" id="sWP-38-d7b">
-                                <rect key="frame" x="30" y="74" width="315" height="20.333333333333329"/>
+                                <rect key="frame" x="30" y="117.99999999999999" width="315" height="20.333333333333329"/>
                                 <subviews>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Л/счет:" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="cgv-Hj-mP2">
                                         <rect key="frame" x="0.0" y="0.0" width="57" height="20.333333333333332"/>
@@ -1039,7 +1040,7 @@
                                 <color key="backgroundColor" white="0.66666666669999997" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                             </stackView>
                             <stackView opaque="NO" contentMode="scaleToFill" spacing="10" translatesAutoresizingMaskIntoConstraints="NO" id="jql-pL-eaz">
-                                <rect key="frame" x="30" y="103" width="315" height="20.333333333333329"/>
+                                <rect key="frame" x="30" y="147" width="315" height="20.333333333333343"/>
                                 <subviews>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Адрес:" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="knJ-JI-c33">
                                         <rect key="frame" x="0.0" y="0.0" width="57" height="20.333333333333332"/>
@@ -1082,6 +1083,13 @@
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="f3E-jf-fR4"/>
                     </view>
+                    <navigationItem key="navigationItem" id="CoZ-Jy-3cf">
+                        <barButtonItem key="rightBarButtonItem" systemItem="trash" id="jwd-s3-5VN">
+                            <connections>
+                                <action selector="deleteButton:" destination="dwq-Tr-T8Q" id="0tg-jx-ddL"/>
+                            </connections>
+                        </barButtonItem>
+                    </navigationItem>
                     <connections>
                         <outlet property="accountNumberLabel" destination="Cxa-qE-xyw" id="FEL-qi-IU8"/>
                         <outlet property="addressLabel" destination="7yh-Dd-JZZ" id="ATV-FM-OVc"/>

@@ -15,6 +15,7 @@ class PersonalAccountsViewController: UIViewController {
     
     var arrayOfAccounts = [PersonalModel]()
     let client = ApiClient()
+   
     
     
     @IBOutlet weak var tableView: UITableView!
@@ -133,13 +134,15 @@ extension PersonalAccountsViewController: UITableViewDelegate, UITableViewDataSo
             let address = arrayOfAccounts[indexPath.row].address,
             let build = arrayOfAccounts[indexPath.row].house_number,
             let flat = arrayOfAccounts[indexPath.row].flat_number,
-            let ls = arrayOfAccounts[indexPath.row].account
+            let ls = arrayOfAccounts[indexPath.row].account,
+            let idAccount = arrayOfAccounts[indexPath.row].id
         {
             let fullAddress = city + ", " + address + " \(build)" + "-\(flat)"
             
             vc.accountNumberLbl = "\(ls)"
             vc.addressLbl = fullAddress
             vc.arrayOfAccounts = arrayOfAccounts
+            vc.indexAccount = indexPath.row
         }
         
         self.navigationController?.pushViewController(vc, animated: true)

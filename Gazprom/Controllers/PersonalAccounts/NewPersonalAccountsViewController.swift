@@ -34,6 +34,9 @@ class NewPersonalAccountsViewController: UIViewController,UITextFieldDelegate {
     var streetSelected = ""
     
     let reloadVC = PersonalAccountsViewController()
+    let alertController = UIAlertController(title: nil, message: "Создание лицевого счета...", preferredStyle: .alert)
+    let spinnerIndicator = UIActivityIndicatorView(style: .whiteLarge)
+    
     
     
    
@@ -60,6 +63,7 @@ class NewPersonalAccountsViewController: UIViewController,UITextFieldDelegate {
    
     @IBAction func buttonSave(_ sender: Any) {
     
+        if lsTextField.text != "" && countryLabel.text != "" && cityLabel.text != "" && addressLabel.text != "" && buildLabel.text != ""  {
         
         let params: [String : String] = ["account": lsTextField.text ?? "NoName",
                       "city": cityLabel.text ?? "NoName",
@@ -70,10 +74,44 @@ class NewPersonalAccountsViewController: UIViewController,UITextFieldDelegate {
         let par: [String:[String:String]] = ["personal_account":params]
         
         postNewAccounts(paramas: par)
-        reloadVC.reloadController()
+      //  reloadVC.reloadController()
+            self.loaderAlert()
 
-        navigationController?.popViewController(animated: true)
+            DispatchQueue.main.asyncAfter(deadline: .now() + 1) {
+                
+                self.spinnerIndicator.stopAnimating()
+                self.alertController.dismiss(animated: true, completion: nil)
+                self.navigationController?.popViewController(animated: false)
+            }
 
+        }
+        else{
+            
+            let alert = UIAlertController(title: "Внимание!", message: "Заполните все поля.", preferredStyle: .alert)
+            let action = UIAlertAction(title: "OK", style: .default, handler: { action in
+                
+                self.checkFieldOnEmpty(textField: self.lsTextField)
+                self.checkFieldOnEmpty(textField: self.countryLabel)
+                self.checkFieldOnEmpty(textField: self.cityLabel)
+                self.checkFieldOnEmpty(textField: self.addressLabel)
+                self.checkFieldOnEmpty(textField: self.buildLabel)
+                
+            })
+            alert.addAction(action)
+            present(alert, animated: false, completion: nil)
+        }
+        
+    }
+    func checkFieldOnEmpty(textField: UITextField) {
+        if textField.text == ""{
+            textField.layer.borderColor = #colorLiteral(red: 0.9254902005, green: 0.2352941185, blue: 0.1019607857, alpha: 1)
+            textField.layer.cornerRadius = 5
+            textField.layer.borderWidth = 1.5
+        }else{
+            textField.layer.borderColor = #colorLiteral(red: 0.8177796602, green: 0.8177796602, blue: 0.8177796602, alpha: 1)
+            textField.layer.cornerRadius = 5
+            textField.layer.borderWidth = 0.5
+        }
     }
     
     
@@ -99,6 +137,15 @@ class NewPersonalAccountsViewController: UIViewController,UITextFieldDelegate {
     
     override func touchesBegan(_ touches: Set<UITouch>, with event: UIEvent?) {
         view.endEditing(true)
+    }
+    
+    func loaderAlert(){
+        
+        spinnerIndicator.center = CGPoint(x: 135.0, y: 100)
+        spinnerIndicator.color = UIColor.black
+        spinnerIndicator.startAnimating()
+        alertController.view.addSubview(spinnerIndicator)
+        self.present(alertController, animated: false, completion: nil)
     }
     
 }
@@ -195,6 +242,7 @@ extension NewPersonalAccountsViewController: UIPickerViewDelegate, UIPickerViewD
             }
         }
     }
+   
 }
 
 extension NewPersonalAccountsViewController{
