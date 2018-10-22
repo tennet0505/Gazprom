@@ -120,7 +120,9 @@ class ApiClient {
                         errorHandler   :@escaping (Error)->()){
         
         let URL = "\(serverUrl)/\(url)"
-        Alamofire.request(URL, parameters: params, headers: jsonHeaders).responseJSON  { (response) in
+        Alamofire.request(URL,
+                          parameters: params,
+                          headers: jsonHeaders).responseJSON  { (response) in
             print(response.result.value ?? " ")
             
             if let itemArray = response.result.value{
@@ -134,7 +136,8 @@ class ApiClient {
                                errorHandler   :@escaping (Error)->()){
         
         let URL = "\(serverUrl)/\(url)"
-        Alamofire.request(URL, parameters: params, headers: jsonHeaders).responseJSON  { (response) in
+        Alamofire.request(URL,
+                          parameters: params, headers: jsonHeaders).responseJSON  { (response) in
             print(response.result.value ?? " ")
             
             if let itemArray = response.result.value{
@@ -163,6 +166,16 @@ class ApiClient {
             }
         }
     }
-    
-   
+    func deletePersonal( id: Int,
+                         successHandler :@escaping ()->(),
+                         errorHandler   :@escaping (Error)->()){
+        
+        Alamofire.request("\(serverUrl)/personal_accounts/\(id)",
+            method: .delete,
+            encoding: JSONEncoding.default,
+            headers: jsonHeaders)
+            .response { (response) in
+                successHandler()
+        }
+    }
 }
