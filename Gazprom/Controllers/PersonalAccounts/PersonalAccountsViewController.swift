@@ -58,9 +58,7 @@ class PersonalAccountsViewController: UIViewController {
         }) { (error) in
             print(error)
             SVProgressHUD.dismiss()
-
         }
-        
     }
     
     func reloadController(){
@@ -73,13 +71,8 @@ class PersonalAccountsViewController: UIViewController {
     
     @IBAction func addNewBillButton(_ sender: Any) {
         
-        let sb = UIStoryboard(name: "Main", bundle: nil)
-        let vc = sb.instantiateViewController(withIdentifier: "NewPersonalAccountsViewController") as! NewPersonalAccountsViewController
-        
-        navigationController?.pushViewController(vc, animated: true)
+       addNewAccount()
     }
-    
-    
 }
 
 extension PersonalAccountsViewController: UITableViewDelegate, UITableViewDataSource{
@@ -104,8 +97,37 @@ extension PersonalAccountsViewController: UITableViewDelegate, UITableViewDataSo
     
     func tableView(_ tableView: UITableView, commit editingStyle: UITableViewCell.EditingStyle, forRowAt indexPath: IndexPath) {
         if editingStyle == .delete {
-            if let accountNumber = arrayOfAccounts[indexPath.row].account,
-                let idAccount = arrayOfAccounts[indexPath.row].id{
+//            if let accountNumber = arrayOfAccounts[indexPath.row].account,
+//                let idAccount = arrayOfAccounts[indexPath.row].id{
+//                let enterAlert = UIAlertController(title: "Вы хотите удалить лицевой счет: \(accountNumber)?", message: "", preferredStyle: .alert
+//                )
+//
+//                let action1 = UIAlertAction(title: "Удалить", style: .default) { (action) in
+//                    self.deleteAccount(id: idAccount)
+//                    self.arrayOfAccounts.remove(at: indexPath.row)
+//                    self.tableView.reloadData()
+//                }
+//                let action2 = UIAlertAction(title: "Отмена", style: .cancel, handler: nil)
+//
+//                enterAlert.addAction(action1)
+//                enterAlert.addAction(action2)
+//
+//                present(enterAlert, animated: true, completion: nil)
+//
+//            }
+        }
+    }
+
+    
+    func tableView(_ tableView: UITableView, editActionsForRowAt indexPath: IndexPath) -> [UITableViewRowAction]? {
+        let NewButton = UITableViewRowAction(style: .default, title: "Добавить") { (action, indexPath) in
+            print("Add new Account")
+            self.addNewAccount()
+        }
+        let DeleteButton = UITableViewRowAction(style: .default, title: " Удалить") { (action, indexPath) in
+            print("Delete new Account")
+            if let accountNumber = self.arrayOfAccounts[indexPath.row].account,
+                let idAccount = self.arrayOfAccounts[indexPath.row].id{
                 let enterAlert = UIAlertController(title: "Вы хотите удалить лицевой счет: \(accountNumber)?", message: "", preferredStyle: .alert
                 )
                 
@@ -119,11 +141,14 @@ extension PersonalAccountsViewController: UITableViewDelegate, UITableViewDataSo
                 enterAlert.addAction(action1)
                 enterAlert.addAction(action2)
                 
-                present(enterAlert, animated: true, completion: nil)
+                self.present(enterAlert, animated: true, completion: nil)
                 
             }
         }
+         NewButton.backgroundColor = #colorLiteral(red: 0.4666666687, green: 0.7647058964, blue: 0.2666666806, alpha: 1)
+        return[DeleteButton,NewButton]
     }
+    
     
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         
@@ -134,8 +159,7 @@ extension PersonalAccountsViewController: UITableViewDelegate, UITableViewDataSo
             let address = arrayOfAccounts[indexPath.row].address,
             let build = arrayOfAccounts[indexPath.row].house_number,
             let flat = arrayOfAccounts[indexPath.row].flat_number,
-            let ls = arrayOfAccounts[indexPath.row].account,
-            let idAccount = arrayOfAccounts[indexPath.row].id
+            let ls = arrayOfAccounts[indexPath.row].account
         {
             let fullAddress = city + ", " + address + " \(build)" + "-\(flat)"
             
@@ -146,5 +170,12 @@ extension PersonalAccountsViewController: UITableViewDelegate, UITableViewDataSo
         }
         
         self.navigationController?.pushViewController(vc, animated: true)
+    }
+    
+    func addNewAccount() {
+        let sb = UIStoryboard(name: "Main", bundle: nil)
+        let vc = sb.instantiateViewController(withIdentifier: "NewPersonalAccountsViewController") as! NewPersonalAccountsViewController
+        
+        navigationController?.pushViewController(vc, animated: true)
     }
 }
