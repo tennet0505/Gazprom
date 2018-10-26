@@ -18,9 +18,9 @@ class FAQTableViewCell: UITableViewCell {
 
     override func setSelected(_ selected: Bool, animated: Bool) {
         super.setSelected(selected, animated: animated)
-
-        // Configure the view for the selected state
+    
     }
+    
     @IBAction func buttonTap(_ sender: UIButton) {
         sender.isSelected = !sender.isSelected
         
@@ -40,8 +40,7 @@ class FAQTableViewCell: UITableViewCell {
         label.lineBreakMode = NSLineBreakMode.byWordWrapping
         label.text = text
         label.sizeToFit()
-        return label.frame.height
+        print("label height", label.frame.height)
+        return label.frame.height * 0.7
     }
-
-    
 }

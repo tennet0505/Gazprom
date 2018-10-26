@@ -28,7 +28,6 @@ class MapViewController: UIViewController {
         creatAnnotations(locations: annotationsPoints)
         checkLocationServices()
         
-        
     }
     func setupLocationManager() {
         locationManager.delegate = self as CLLocationManagerDelegate
@@ -120,15 +119,11 @@ class MapViewController: UIViewController {
         }
     }
 }
+
+
+
 extension MapViewController: CLLocationManagerDelegate{
     
-//    func locationManager(_ manager: CLLocationManager, didUpdateLocations locations: [CLLocation]) {
-//        guard let location = locations.last else { return }
-//        let center = CLLocationCoordinate2D.init(latitude: location.coordinate.latitude, longitude: location.coordinate.longitude)
-//        let region = MKCoordinateRegion.init(center: center, latitudinalMeters: regionInMeters, longitudinalMeters: regionInMeters)
-//        mapView.setRegion(region, animated: true)
-//    }
-
     func locationManager(_ manager: CLLocationManager, didChangeAuthorization status: CLAuthorizationStatus) {
         checkLocationAuthtorization()
     }

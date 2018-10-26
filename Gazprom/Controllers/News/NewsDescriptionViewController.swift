@@ -10,7 +10,6 @@ import UIKit
 
 class NewsDescriptionViewController: UIViewController {
     
-    
     @IBOutlet weak var labelTitle: UILabel!
     @IBOutlet weak var labelDate: UILabel!
     @IBOutlet weak var DescriptionTextView: UITextView!
@@ -25,7 +24,5 @@ class NewsDescriptionViewController: UIViewController {
         labelTitle.text = lblTitle
         labelDate.text = lblDate
         DescriptionTextView.text = descriptionNews
-       
     }
-    
 }

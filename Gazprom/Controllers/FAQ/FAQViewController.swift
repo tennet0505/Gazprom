@@ -17,20 +17,25 @@ class FAQViewController: UIViewController {
     let client = ApiClient()
     
     @IBOutlet weak var tableView: UITableView!
-    
-    
+    override func viewWillAppear(_ animated: Bool) {
+        super.viewWillAppear(animated)
+       
+        getFAQ()
+        
+    }
     override func viewDidLoad() {
         super.viewDidLoad()
 
         tableView.estimatedRowHeight = 100
         tableView.rowHeight = UITableView.automaticDimension
         
-        getFAQ()
+        
         
     }
     
     func getFAQ() {
         SVProgressHUD.show()
+        arrayOfFAQ.removeAll()
         client.getFAQ(successHandler: { (value) in
             
             let array = value
@@ -65,14 +70,11 @@ extension FAQViewController: UITableViewDelegate, UITableViewDataSource{
         cell.answerLabel.layer.masksToBounds = true
         cell.answerLabel.layer.cornerRadius = 10
 
-        
         return cell
     }
     @objc func expandCollapse(sender:UIButton) {
         
         self.tableView.reloadData()
     }
-    
-   
 }
 

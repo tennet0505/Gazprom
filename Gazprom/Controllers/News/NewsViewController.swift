@@ -71,22 +71,24 @@ class NewsViewController: UIViewController {
     
     func formatDate(date: String) -> String {
        
-        var dateString = ""
-       
-        let dateFormater = DateFormatter()
-        let dateFormater1 = DateFormatter()
+        let dateString = ""
+//
+//        let dateFormater = DateFormatter()
+//        let dateFormater1 = DateFormatter()
+//
+//        dateFormater.dateFormat = "yyyy-MM-dd'T'HH:mm.sssZ"
+//        let stringDate = dateFormater.date(from: date)
+//        print(stringDate)
         
-        dateFormater.dateFormat = "yyyy-MM-dd'T'HH:mm.sssZ"
-        let stringDate = dateFormater.date(from: date)
-        print(stringDate)
       //  2018-10-16T08:20:16.281Z
 //        dateFormater1.dateFormat = "yyyy-MM-dd"
 //        date1 = dateFormater1.date(from: stringDate)
 //        dateString = dateFormater1.string(from: date1)
         
-        print(dateString)
+//        print(dateString)
+//
+       return dateString
         
-        return dateString
     }
 }
 
@@ -102,10 +104,7 @@ extension NewsViewController: UITableViewDelegate, UITableViewDataSource{
         let cell = tableView.dequeueReusableCell(withIdentifier: "Cell", for: indexPath) as! NewsTableViewCell
         cell.labelTitle.text = arrayOfNews[indexPath.row].title
         cell.labelDate.text = arrayOfNews[indexPath.row].created_at
-//        cell.labelTitle.textColor = #colorLiteral(red: 0.03137254902, green: 0.4078431373, blue: 0.6745098039, alpha: 1)
-//        cell.labelDate.textColor = #colorLiteral(red: 0.3529411765, green: 0.3529411765, blue: 0.3529411765, alpha: 1)
-        
-        
+
         return cell
     }
     

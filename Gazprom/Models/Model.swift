@@ -93,6 +93,7 @@ class PersonalModel: Mappable {
     address: String?,
     house_number: String?,
     flat_number: String?
+  //  meter_reading: [IndicationModel]?
     
     required init?(map: Map) {
     }
@@ -103,9 +104,48 @@ class PersonalModel: Mappable {
         house_number <- map["house_number"]
         address <- map["address"]
         flat_number <- map["flat_number"]
+  //      meter_reading <- map["meter_reading"]
+    }
+    
+}
+class IndicationModel: Mappable {
+    
+    var
+    id: Int?,
+    created_at: String?,
+    indication: Double?,
+    personal_account_id: Int?,
+    updated_at: String?
+    required init?(map: Map) {
+    }
+    func mapping(map: Map) {
+        id <- map["id"]
+        created_at <- map["created_at"]
+        indication <- map["indication"]
+        personal_account_id <- map["personal_account_id"]
+        updated_at <- map["updated_at"]
+    }
+    init(id: Int?, created_at: String?, indication: Double?) {
+        self.id = id
+        self.created_at = created_at
+        self.indication = indication
     }
 }
 
 
+
+
+class IndicationsPersonalAccountModel: Mappable{
+    var
+    personal_account:PersonalModel?,
+    meter_reading:[IndicationModel]?
+    
+    required init?(map: Map) {}
+    func mapping(map: Map) {
+        personal_account <- map["personal_account"]
+        meter_reading <- map["meter_reading"]
+    }
+    
+}
 
 

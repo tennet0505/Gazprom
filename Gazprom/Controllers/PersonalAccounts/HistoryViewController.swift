@@ -22,13 +22,22 @@ class HistoryViewController: UIViewController {
     var indexAccount = 0
     let client = ApiClient()
     let reloadVC = PersonalAccountsViewController()
+    var idAccount = 0
     
     let alertController = UIAlertController(title: nil, message: "Удаление лицевого счета...", preferredStyle: .alert)
     let spinnerIndicator = UIActivityIndicatorView(style: .whiteLarge)
    
     
     var arrayOfAccounts = [PersonalModel]()
-    
+    var Indications = [IndicationModel]()
+  //  var accountPersonal = PersonalModel()
+  
+    override func viewWillAppear(_ animated: Bool) {
+        super.viewWillAppear(animated)
+        
+        getIndicationsl()
+        tableView.reloadData()
+    }
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -44,11 +53,11 @@ class HistoryViewController: UIViewController {
         let vc = sb.instantiateViewController(withIdentifier: "NewBillViewController") as! NewBillViewController
         
         vc.label = accountNumberLbl
+        vc.idAccount = idAccount
      
               SVProgressHUD.dismiss()
               self.navigationController?.pushViewController(vc, animated: false)
 
-        
     }
     
     @IBAction func deleteButton(_ sender: Any) {
@@ -91,23 +100,43 @@ class HistoryViewController: UIViewController {
             SVProgressHUD.dismiss()
             
         }
+    }
+    func getIndicationsl() {
+        SVProgressHUD.show()
         
+        client.getIndications(url:"personal_accounts/\(idAccount)",
+            successHandler: { (array) in
+                
+                if let array = array.meter_reading{
+                    self.Indications = array
+                    print(self.idAccount)
+
+                }
+                self.tableView.reloadData()
+                SVProgressHUD.dismiss()
+                
+        }) { (error) in
+            print(error)
+            SVProgressHUD.dismiss()
+        }
     }
     
-   
 }
+
 extension HistoryViewController: UITableViewDelegate, UITableViewDataSource{
     
     public func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return arrayOfAccounts.count
+        return Indications.count
     }
     
     public func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: "Cell", for: indexPath) as! AccountsTableViewCell
-        
-        cell.labelDate.text = "must be date of bill"
-        cell.labelBill.text = "must be bill"
-        
+      
+        if let dateIndication = Indications[indexPath.row].created_at,
+            let indication = Indications[indexPath.row].indication {
+                cell.labelDate.text = "\(dateIndication)"
+                cell.labelBill.text = "\(indication)"
+        }
         return cell
     }
    

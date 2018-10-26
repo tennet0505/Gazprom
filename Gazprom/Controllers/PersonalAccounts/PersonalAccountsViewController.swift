@@ -15,11 +15,8 @@ class PersonalAccountsViewController: UIViewController {
     
     var arrayOfAccounts = [PersonalModel]()
     let client = ApiClient()
-   
-    
     
     @IBOutlet weak var tableView: UITableView!
-    
     
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
@@ -121,8 +118,11 @@ extension PersonalAccountsViewController: UITableViewDelegate, UITableViewDataSo
     
     func tableView(_ tableView: UITableView, editActionsForRowAt indexPath: IndexPath) -> [UITableViewRowAction]? {
         let NewButton = UITableViewRowAction(style: .default, title: "Добавить") { (action, indexPath) in
+            
             print("Add new Account")
-            self.addNewAccount()
+            if let id = self.arrayOfAccounts[indexPath.row].id{
+            self.addNewBill(id: id)
+            }
         }
         let DeleteButton = UITableViewRowAction(style: .default, title: " Удалить") { (action, indexPath) in
             print("Delete new Account")
@@ -159,14 +159,17 @@ extension PersonalAccountsViewController: UITableViewDelegate, UITableViewDataSo
             let address = arrayOfAccounts[indexPath.row].address,
             let build = arrayOfAccounts[indexPath.row].house_number,
             let flat = arrayOfAccounts[indexPath.row].flat_number,
-            let ls = arrayOfAccounts[indexPath.row].account
+            let ls = arrayOfAccounts[indexPath.row].account,
+            let id = arrayOfAccounts[indexPath.row].id
+
         {
             let fullAddress = city + ", " + address + " \(build)" + "-\(flat)"
             
             vc.accountNumberLbl = "\(ls)"
             vc.addressLbl = fullAddress
-            vc.arrayOfAccounts = arrayOfAccounts
+          //  vc.arrayOfAccounts = arrayOfAccounts
             vc.indexAccount = indexPath.row
+            vc.idAccount = id
         }
         
         self.navigationController?.pushViewController(vc, animated: true)
@@ -176,6 +179,12 @@ extension PersonalAccountsViewController: UITableViewDelegate, UITableViewDataSo
         let sb = UIStoryboard(name: "Main", bundle: nil)
         let vc = sb.instantiateViewController(withIdentifier: "NewPersonalAccountsViewController") as! NewPersonalAccountsViewController
         
+        navigationController?.pushViewController(vc, animated: true)
+    }
+    func addNewBill(id: Int) {
+        let sb = UIStoryboard(name: "Main", bundle: nil)
+        let vc = sb.instantiateViewController(withIdentifier: "NewBillViewController") as! NewBillViewController
+        vc.idAccount = id
         navigationController?.pushViewController(vc, animated: true)
     }
 }

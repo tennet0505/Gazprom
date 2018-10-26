@@ -10,10 +10,8 @@ import UIKit
 
 class PaymentsTableViewCell: UITableViewCell {
 
-  
     @IBOutlet weak var imageLogo: UIImageView!
     @IBOutlet weak var labelTitle: UILabel!
-    
     
     override func setSelected(_ selected: Bool, animated: Bool) {
         super.setSelected(selected, animated: animated)

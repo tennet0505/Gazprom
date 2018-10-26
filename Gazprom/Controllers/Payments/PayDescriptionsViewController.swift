@@ -26,10 +26,5 @@ class PayDescriptionsViewController: UIViewController {
             imageLogo.af_setImage(withURL: urlImg)
         }
         descriptionTextView.text = descriptionPayment
-        
     }
-    
-
-   
-
 }

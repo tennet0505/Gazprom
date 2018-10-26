@@ -29,8 +29,6 @@ class SettingsViewController: UIViewController {
         
         getPersonal()
         
-      
-        
     }
     func getPersonal() {
         SVProgressHUD.show()

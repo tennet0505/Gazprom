@@ -31,7 +31,6 @@ class PaymentsViewController: UIViewController {
 
     }
     
-    
     func getPaymentss() {
         arrayOfpayments.removeAll()
         SVProgressHUD.show()

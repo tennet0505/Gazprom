@@ -83,7 +83,6 @@ class NewPersonalAccountsViewController: UIViewController,UITextFieldDelegate {
                 self.alertController.dismiss(animated: true, completion: nil)
                 self.navigationController?.popViewController(animated: false)
             }
-
         }
         else{
             
@@ -277,7 +276,7 @@ extension NewPersonalAccountsViewController{
             
             if let dict = dictionary["cities"]{
                 for country in dict {
-                    self.arrayOfCities.append(country)
+                    self.arrayOfCities.append(country as! String)
                     self.postRequestStreets(url: "addresses", citySelected: "Бишкек")
                     print(self.arrayOfCities)
                     SVProgressHUD.dismiss()
@@ -297,7 +296,7 @@ extension NewPersonalAccountsViewController{
             
             if let dict = dictionary["addresses"]{
                 for country in dict {
-                    self.arrayOfSreets.append(country)
+                    self.arrayOfSreets.append(country as! String)
                     
                     print(self.arrayOfSreets)
                     SVProgressHUD.dismiss()

@@ -10,11 +10,9 @@ import UIKit
 
 class NewsTableViewCell: UITableViewCell {
 
-    
     @IBOutlet weak var labelTitle: UILabel!
     @IBOutlet weak var labelDate: UILabel!
     
-      
     override func setSelected(_ selected: Bool, animated: Bool) {
         super.setSelected(selected, animated: animated)
 

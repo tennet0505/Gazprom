@@ -19,7 +19,7 @@ class ApiClient {
         return ["Content-Type":"application/json"]
     }
     func newError(_ name:String) -> Error {
-        let errorDomain = "com.spalmalo.Promzona-space"
+        let errorDomain = "kg.gazprom.www"
         let userInfo = [NSLocalizedFailureReasonErrorKey: "error in \(name)"]
         let returnError = NSError(domain: errorDomain, code: 1, userInfo: userInfo)
         return returnError
@@ -113,10 +113,24 @@ class ApiClient {
             }
         }
     }
+    func getIndications (url: String,
+                         successHandler :@escaping (IndicationsPersonalAccountModel)->(),
+                         errorHandler   :@escaping (Error)->()){
+        
+        let URL = "\(serverUrl)/\(url)"
+      
+        Alamofire.request(URL, headers: jsonHeaders).responseObject { (response: DataResponse<IndicationsPersonalAccountModel>) in
+            
+            if let value = response.result.value{
+            successHandler(value)
+            
+            }
+        }
+    }
     
     func postRequest (  url: String,
                         params: [String: String],
-                        successHandler :@escaping (Dictionary<String, [String]>)->(),
+                        successHandler :@escaping (Dictionary<String, [Any]>)->(),
                         errorHandler   :@escaping (Error)->()){
         
         let URL = "\(serverUrl)/\(url)"
@@ -145,10 +159,32 @@ class ApiClient {
             }
         }
     }
+    func postIndications (  url: String,
+                            params: [String: Int],
+                            successHandler :@escaping (Dictionary<String, Any>)->(),
+                            errorHandler   :@escaping (Error)->()){
+        
+        let URL = "\(serverUrl)/\(url)"
+        Alamofire.request(URL,
+                          method: .post,
+                          parameters: params,
+                          encoding: JSONEncoding.default,
+                          headers: jsonHeaders).responseJSON  { (response) in
+                            print(response.result.value ?? " ")
+                            print("Status code: ",response.response?.statusCode)
+                            if let StatusCode = response.response?.statusCode{
+                                if StatusCode >= 200 && StatusCode <= 299{
+                                    if let response = response.result.value{
+                                        successHandler(response as! Dictionary<String, Any>)
+                                    }
+                                }
+                            }
+        }
+    }
     
     func postNewAccount (url: String,
                          params: [String: [String:String]],
-                         successHandler :@escaping (Dictionary<String, [String]>)->(),
+                         successHandler :@escaping (Dictionary<String, [Any]>)->(),
                          errorHandler   :@escaping (Error)->()){
         
         let URL = "\(serverUrl)/\(url)"
@@ -161,9 +197,7 @@ class ApiClient {
             ).responseJSON  { (response) in
                 print(response.result.value ?? "")
             
-            if let itemArray = response.result.value{
-                successHandler(itemArray as!  Dictionary<String, [String]>)
-            }
+           print(response)
         }
     }
     func deletePersonal( id: Int,
