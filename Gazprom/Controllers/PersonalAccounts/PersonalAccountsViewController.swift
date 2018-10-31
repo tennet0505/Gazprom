@@ -178,7 +178,6 @@ extension PersonalAccountsViewController: UITableViewDelegate, UITableViewDataSo
     func addNewAccount() {
         let sb = UIStoryboard(name: "Main", bundle: nil)
         let vc = sb.instantiateViewController(withIdentifier: "NewPersonalAccountsViewController") as! NewPersonalAccountsViewController
-        
         navigationController?.pushViewController(vc, animated: true)
     }
     func addNewBill(id: Int) {

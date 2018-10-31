@@ -28,7 +28,6 @@ class NewBillViewController: UIViewController, UITextFieldDelegate {
     override func viewDidLoad() {
         super.viewDidLoad()
         
-       
         acoountLabelonView.text = label
         
     }

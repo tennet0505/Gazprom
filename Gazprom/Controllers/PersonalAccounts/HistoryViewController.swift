@@ -54,10 +54,11 @@ class HistoryViewController: UIViewController {
         
         vc.label = accountNumberLbl
         vc.idAccount = idAccount
-     
-              SVProgressHUD.dismiss()
-              self.navigationController?.pushViewController(vc, animated: false)
+        
+        SVProgressHUD.dismiss()
 
+        self.navigationController?.pushViewController(vc, animated: false)
+        
     }
     
     @IBAction func deleteButton(_ sender: Any) {
@@ -112,6 +113,7 @@ class HistoryViewController: UIViewController {
                     print(self.idAccount)
 
                 }
+                self.Indications.reverse()
                 self.tableView.reloadData()
                 SVProgressHUD.dismiss()
                 

@@ -25,6 +25,8 @@
 		0656EDC32176F2160050A802 /* HistoryViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0656EDC22176F2160050A802 /* HistoryViewController.swift */; };
 		0656EDC52176FADE0050A802 /* AccountsTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0656EDC42176FADE0050A802 /* AccountsTableViewCell.swift */; };
 		0656EDC72176FF940050A802 /* NewBillViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0656EDC62176FF940050A802 /* NewBillViewController.swift */; };
+		06CFB551218873A100ABD9A5 /* RegistrationViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 06CFB550218873A100ABD9A5 /* RegistrationViewController.swift */; };
+		06CFB553218873B000ABD9A5 /* AuthViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 06CFB552218873B000ABD9A5 /* AuthViewController.swift */; };
 		06D6063321708B8D001F262A /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 06D6063221708B8D001F262A /* AppDelegate.swift */; };
 		06D6063521708B8D001F262A /* MainViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 06D6063421708B8D001F262A /* MainViewController.swift */; };
 		06D6063821708B8D001F262A /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 06D6063621708B8D001F262A /* Main.storyboard */; };
@@ -54,6 +56,8 @@
 		0656EDC22176F2160050A802 /* HistoryViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HistoryViewController.swift; sourceTree = "<group>"; };
 		0656EDC42176FADE0050A802 /* AccountsTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AccountsTableViewCell.swift; sourceTree = "<group>"; };
 		0656EDC62176FF940050A802 /* NewBillViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NewBillViewController.swift; sourceTree = "<group>"; };
+		06CFB550218873A100ABD9A5 /* RegistrationViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegistrationViewController.swift; sourceTree = "<group>"; };
+		06CFB552218873B000ABD9A5 /* AuthViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthViewController.swift; sourceTree = "<group>"; };
 		06D6062F21708B8D001F262A /* Gazprom.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Gazprom.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		06D6063221708B8D001F262A /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		06D6063421708B8D001F262A /* MainViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainViewController.swift; sourceTree = "<group>"; };
@@ -130,6 +134,15 @@
 			path = FAQ;
 			sourceTree = "<group>";
 		};
+		06CFB54F2188736600ABD9A5 /* Authorization */ = {
+			isa = PBXGroup;
+			children = (
+				06CFB550218873A100ABD9A5 /* RegistrationViewController.swift */,
+				06CFB552218873B000ABD9A5 /* AuthViewController.swift */,
+			);
+			path = Authorization;
+			sourceTree = "<group>";
+		};
 		06D6062621708B8D001F262A = {
 			isa = PBXGroup;
 			children = (
@@ -184,6 +197,7 @@
 			children = (
 				06D6063421708B8D001F262A /* MainViewController.swift */,
 				06120A4C2170B8E70006DB8A /* SettingsViewController.swift */,
+				06CFB54F2188736600ABD9A5 /* Authorization */,
 				06D606492170982F001F262A /* News */,
 				06120A3B21709FBD0006DB8A /* Payments */,
 				06120A422170A4390006DB8A /* PersonalAccounts */,
@@ -381,6 +395,8 @@
 				06D60648217097C1001F262A /* NewsViewController.swift in Sources */,
 				0656EDC72176FF940050A802 /* NewBillViewController.swift in Sources */,
 				06120A3A21709C3F0006DB8A /* NewsDescriptionViewController.swift in Sources */,
+				06CFB553218873B000ABD9A5 /* AuthViewController.swift in Sources */,
+				06CFB551218873A100ABD9A5 /* RegistrationViewController.swift in Sources */,
 				0656EDC32176F2160050A802 /* HistoryViewController.swift in Sources */,
 				06D6063521708B8D001F262A /* MainViewController.swift in Sources */,
 				06120A482170A4F40006DB8A /* PersonalAccountsTableViewCell.swift in Sources */,
