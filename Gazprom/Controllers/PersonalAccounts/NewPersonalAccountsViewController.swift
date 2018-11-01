@@ -116,7 +116,7 @@ class NewPersonalAccountsViewController: UIViewController,UITextFieldDelegate {
     
     func postNewAccounts(paramas: [String:[String:String]] ) {
         
-        client.postNewAccount(url: "personal_accounts", params: paramas, successHandler: { (response) in
+        client.postNewAccount(url: "personal_accounts.json", params: paramas, successHandler: { (response) in
             
             print(response)
             self.reloadVC.reloadController()
