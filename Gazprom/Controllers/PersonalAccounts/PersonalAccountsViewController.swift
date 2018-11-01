@@ -167,7 +167,7 @@ extension PersonalAccountsViewController: UITableViewDelegate, UITableViewDataSo
             
             vc.accountNumberLbl = "\(ls)"
             vc.addressLbl = fullAddress
-          //  vc.arrayOfAccounts = arrayOfAccounts
+            vc.arrayOfAccounts = arrayOfAccounts
             vc.indexAccount = indexPath.row
             vc.idAccount = id
         }
