@@ -147,5 +147,28 @@ class IndicationsPersonalAccountModel: Mappable{
     }
     
 }
-
+class AuthModel: Mappable {
+    
+    var
+    auth_token: String?,
+    user: UserModel?
+    required init?(map: Map) {
+    }
+    func mapping(map: Map) {
+        auth_token <- map["auth_token"]
+        user <- map["user"]
+    }
+}
+class UserModel: Mappable {
+    
+    var
+    id: Int?,
+    email: String?
+    required init?(map: Map) {
+    }
+    func mapping(map: Map) {
+        id <- map["id"]
+        email <- map["email"]
+    }
+}
 

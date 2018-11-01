@@ -34,19 +34,21 @@ class NewsViewController: UIViewController {
     func getOffices() {
         SVProgressHUD.show()
         arrayOfNews.removeAll()
-        client.getNews(successHandler: { (value) in
-            
-            let array = value
-            for news in array {
-                self.arrayOfNews.append(news)
-               
+        
+        if let tokenUser = UserDefaults.standard.value(forKey: "auth_token") as! String? {
+            client.getNews(successHandler: { (value) in
+                
+                let array = value
+                for news in array {
+                    self.arrayOfNews.append(news)
+                }
+                self.tableView.reloadData()
+                SVProgressHUD.dismiss()
+                print(self.arrayOfNews)
+            }) { (error) in
+                print(error)
+                SVProgressHUD.dismiss()
             }
-            self.tableView.reloadData()
-            SVProgressHUD.dismiss()
-            print(self.arrayOfNews)
-        }) { (error) in
-            print(error)
-            SVProgressHUD.dismiss()
         }
     }
     

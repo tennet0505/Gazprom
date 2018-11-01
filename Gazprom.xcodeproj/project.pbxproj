@@ -28,7 +28,6 @@
 		06CFB551218873A100ABD9A5 /* RegistrationViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 06CFB550218873A100ABD9A5 /* RegistrationViewController.swift */; };
 		06CFB553218873B000ABD9A5 /* AuthViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 06CFB552218873B000ABD9A5 /* AuthViewController.swift */; };
 		06D6063321708B8D001F262A /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 06D6063221708B8D001F262A /* AppDelegate.swift */; };
-		06D6063521708B8D001F262A /* MainViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 06D6063421708B8D001F262A /* MainViewController.swift */; };
 		06D6063821708B8D001F262A /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 06D6063621708B8D001F262A /* Main.storyboard */; };
 		06D6063A21708B8E001F262A /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 06D6063921708B8E001F262A /* Assets.xcassets */; };
 		06D6063D21708B8E001F262A /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 06D6063B21708B8E001F262A /* LaunchScreen.storyboard */; };
@@ -60,7 +59,6 @@
 		06CFB552218873B000ABD9A5 /* AuthViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthViewController.swift; sourceTree = "<group>"; };
 		06D6062F21708B8D001F262A /* Gazprom.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Gazprom.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		06D6063221708B8D001F262A /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		06D6063421708B8D001F262A /* MainViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainViewController.swift; sourceTree = "<group>"; };
 		06D6063721708B8D001F262A /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		06D6063921708B8E001F262A /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		06D6063C21708B8E001F262A /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
@@ -195,7 +193,6 @@
 		06D6064621708BFE001F262A /* Controllers */ = {
 			isa = PBXGroup;
 			children = (
-				06D6063421708B8D001F262A /* MainViewController.swift */,
 				06120A4C2170B8E70006DB8A /* SettingsViewController.swift */,
 				06CFB54F2188736600ABD9A5 /* Authorization */,
 				06D606492170982F001F262A /* News */,
@@ -398,7 +395,6 @@
 				06CFB553218873B000ABD9A5 /* AuthViewController.swift in Sources */,
 				06CFB551218873A100ABD9A5 /* RegistrationViewController.swift in Sources */,
 				0656EDC32176F2160050A802 /* HistoryViewController.swift in Sources */,
-				06D6063521708B8D001F262A /* MainViewController.swift in Sources */,
 				06120A482170A4F40006DB8A /* PersonalAccountsTableViewCell.swift in Sources */,
 				06120A3D2170A0CF0006DB8A /* PaymentsViewController.swift in Sources */,
 				06120A3F2170A0E30006DB8A /* PaymentsTableViewCell.swift in Sources */,

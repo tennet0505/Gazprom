@@ -15,8 +15,11 @@ class ApiClient {
     
     let serverUrl = "https://puppit.spalmalo.com"
     
-    var jsonHeaders:HTTPHeaders{
-        return ["Content-Type":"application/json"]
+    let key = UserDefaults.standard.string(forKey: "auth_token")!
+
+    var jsonHeaders: HTTPHeaders{
+        return ["Content-Type":"application/json",
+                "Authorization":key]
     }
     func newError(_ name:String) -> Error {
         let errorDomain = "kg.gazprom.www"
@@ -40,7 +43,8 @@ class ApiClient {
                 }
         }
     }
-    func getNews ( successHandler :@escaping ([NewsModel])->(),
+    func getNews (
+                   successHandler :@escaping ([NewsModel])->(),
                    errorHandler   :@escaping (Error)->()){
         
         let URL = "\(serverUrl)/news.json"
@@ -171,7 +175,7 @@ class ApiClient {
                           encoding: JSONEncoding.default,
                           headers: jsonHeaders).responseJSON  { (response) in
                             print(response.result.value ?? " ")
-                            print("Status code: ",response.response?.statusCode)
+                            print("Status code: ",response.response?.statusCode as Any)
                             if let StatusCode = response.response?.statusCode{
                                 if StatusCode >= 200 && StatusCode <= 299{
                                     if let response = response.result.value{
@@ -212,4 +216,48 @@ class ApiClient {
                 successHandler()
         }
     }
+   
+    
+    func postUserAuth ( url: String,
+                        params: [String: String],
+                        successHandler :@escaping (AuthModel)->(),
+                        errorHandler   :@escaping (Error)->()){
+        
+        let URL = "\(serverUrl)/\(url)"
+        Alamofire.request(URL,
+                          method: .post,
+                          parameters: params,
+                          encoding: JSONEncoding.default,
+                          headers: jsonHeaders).responseObject { (response: DataResponse<AuthModel>) in
+                            
+                            let statusCode = response.response?.statusCode
+                            if statusCode == 200  {
+                                if let user = response.result.value{
+                                    successHandler(user)
+                                }
+                            }
+        }
+    }
+    func createNewUserAuth ( url: String,
+                        params: [String: String],
+                        successHandler :@escaping (AuthModel)->(),
+                        errorHandler   :@escaping (Error)->()){
+        
+        let URL = "\(serverUrl)/\(url)"
+        Alamofire.request(URL,
+                          method: .post,
+                          parameters: params,
+                          encoding: JSONEncoding.default).responseObject { (response: DataResponse<AuthModel>) in
+                            
+                            let statusCode = response.response?.statusCode
+                            if statusCode == 200  {
+                                if let user = response.result.value{
+                                    successHandler(user)
+                                }
+                            }else{
+                                errorHandler(response.error ?? self.newError(#function))
+                            }
+        }
+    }
+   
 }

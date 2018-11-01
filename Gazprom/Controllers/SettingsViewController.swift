@@ -10,9 +10,6 @@ import UIKit
 import Alamofire
 import SVProgressHUD
 
-protocol LogOutDelegate {
-    func logOutFromApp()
-}
 
 class SettingsViewController: UIViewController {
     
@@ -27,12 +24,17 @@ class SettingsViewController: UIViewController {
     var personal = [PersonalModel]()
     let client = ApiClient()
     var fullAddress = ""
-    var delegate: LogOutDelegate?
+    var email = ""
     
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        getPersonal()
+        if let mail = UserDefaults.standard.string(forKey: "email"){
+            email = mail
+        }
+        
+        emailTextFields.text = email
+      //  getPersonal()
         
         
     }
@@ -67,9 +69,10 @@ class SettingsViewController: UIViewController {
     
     @IBAction func LogOutButton(_ sender: Any) {
         print("LogOut Button Tap")
-//        let sb = UIStoryboard(name: "Main", bundle: nil)
-//        let vc = sb.instantiateViewController(withIdentifier: "MainViewController")
-//        present(vc, animated: true, completion: nil)
+        UserDefaults.standard.set("", forKey: "auth_token")
+        UserDefaults.standard.set("", forKey: "idUser")
+
+
         dismiss(animated: true, completion: nil)
     }
     
