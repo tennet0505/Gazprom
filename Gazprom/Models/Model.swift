@@ -93,7 +93,6 @@ class PersonalModel: Mappable {
     address: String?,
     house_number: String?,
     flat_number: String?
-  //  meter_reading: [IndicationModel]?
     
     required init?(map: Map) {
     }
@@ -104,7 +103,6 @@ class PersonalModel: Mappable {
         house_number <- map["house_number"]
         address <- map["address"]
         flat_number <- map["flat_number"]
-  //      meter_reading <- map["meter_reading"]
     }
     
 }

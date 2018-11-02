@@ -28,6 +28,7 @@ class PersonalAccountsViewController: UIViewController {
         super.viewDidLoad()
         
     }
+   
     func getPersonal() {
         SVProgressHUD.show()
         arrayOfAccounts.removeAll()
@@ -92,28 +93,6 @@ extension PersonalAccountsViewController: UITableViewDelegate, UITableViewDataSo
         return cell
     }
     
-    func tableView(_ tableView: UITableView, commit editingStyle: UITableViewCell.EditingStyle, forRowAt indexPath: IndexPath) {
-        if editingStyle == .delete {
-//            if let accountNumber = arrayOfAccounts[indexPath.row].account,
-//                let idAccount = arrayOfAccounts[indexPath.row].id{
-//                let enterAlert = UIAlertController(title: "Вы хотите удалить лицевой счет: \(accountNumber)?", message: "", preferredStyle: .alert
-//                )
-//
-//                let action1 = UIAlertAction(title: "Удалить", style: .default) { (action) in
-//                    self.deleteAccount(id: idAccount)
-//                    self.arrayOfAccounts.remove(at: indexPath.row)
-//                    self.tableView.reloadData()
-//                }
-//                let action2 = UIAlertAction(title: "Отмена", style: .cancel, handler: nil)
-//
-//                enterAlert.addAction(action1)
-//                enterAlert.addAction(action2)
-//
-//                present(enterAlert, animated: true, completion: nil)
-//
-//            }
-        }
-    }
 
     
     func tableView(_ tableView: UITableView, editActionsForRowAt indexPath: IndexPath) -> [UITableViewRowAction]? {

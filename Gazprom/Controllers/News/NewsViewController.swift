@@ -35,7 +35,7 @@ class NewsViewController: UIViewController {
         SVProgressHUD.show()
         arrayOfNews.removeAll()
         
-        if let tokenUser = UserDefaults.standard.value(forKey: "auth_token") as! String? {
+        if UserDefaults.standard.string(forKey: "auth_token") != nil {
             client.getNews(successHandler: { (value) in
                 
                 let array = value
