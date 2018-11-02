@@ -13,6 +13,7 @@ import Alamofire
 
 class NewBillViewController: UIViewController, UITextFieldDelegate {
 
+    @IBOutlet weak var lastIndicationLabel: UILabel!
     @IBOutlet weak var viewPayment: UIView!
     @IBOutlet weak var acoountLabelonView: UILabel!
     @IBOutlet weak var addPayTextfield: UITextField!
@@ -31,6 +32,7 @@ class NewBillViewController: UIViewController, UITextFieldDelegate {
         
         acoountLabelonView.text = label
         lastIndication = UserDefaults.standard.double(forKey: "lastIndication")
+        lastIndicationLabel.text = "\(lastIndication)"
         
     }
     @IBAction func payButtonOnView(_ sender: Any) {
@@ -43,7 +45,7 @@ class NewBillViewController: UIViewController, UITextFieldDelegate {
             if value > lastIndication{
                 alertToPayment(lsString:  acoountLabelonView.text ?? "NoAccounts" , numbers: addPayTextfield.text ?? "NoNumbers" )}
             else{
-                showAlert(title: "Внимание!", message: "Вводимые показания счетчика, должны быть больше предыдущего показания!")
+                showAlert(title: "Внимание!", message: "Вводимые показания счетчика, должны быть больше предыдущего показания: \(lastIndication)! ")
                 
             }
         }
