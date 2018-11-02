@@ -23,6 +23,7 @@ class HistoryViewController: UIViewController {
     let client = ApiClient()
     let reloadVC = PersonalAccountsViewController()
     var idAccount = 0
+    var lastIndication = 0.0
     
     let alertController = UIAlertController(title: nil, message: "Удаление лицевого счета...", preferredStyle: .alert)
     let spinnerIndicator = UIActivityIndicatorView(style: .whiteLarge)
@@ -104,16 +105,20 @@ class HistoryViewController: UIViewController {
     }
     func getIndicationsl() {
         SVProgressHUD.show()
-        
+        Indications.removeAll()
+        UserDefaults.standard.set(0.0, forKey: "lastIndication")
         client.getIndications(url:"personal_accounts/\(idAccount)",
             successHandler: { (array) in
                 
                 if let array = array.meter_reading{
                     self.Indications = array
                     print(self.idAccount)
-
                 }
-                self.Indications.reverse()
+                if self.Indications.count > 0{
+                    self.Indications.reverse()
+                    if let indication = self.Indications[0].indication{
+                        UserDefaults.standard.set(indication, forKey: "lastIndication")
+                    }}
                 self.tableView.reloadData()
                 SVProgressHUD.dismiss()
                 

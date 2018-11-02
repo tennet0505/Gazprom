@@ -24,27 +24,36 @@ class NewBillViewController: UIViewController, UITextFieldDelegate {
 
     var label = ""
     var idAccount = 0
+    var lastIndication = 0.0
     
     override func viewDidLoad() {
         super.viewDidLoad()
         
         acoountLabelonView.text = label
+        lastIndication = UserDefaults.standard.double(forKey: "lastIndication")
         
     }
     @IBAction func payButtonOnView(_ sender: Any) {
         
         if addPayTextfield.text == ""{
-            showAlert()
-        }else{
-            
-            alertToPayment(lsString:  acoountLabelonView.text ?? "NoAccounts" , numbers: addPayTextfield.text ?? "NoNumbers" )
+            showAlert(title: "Введите показания счетчика!!!", message: "")
         }
-        
+        if let textToDouble = addPayTextfield.text?.doubleValue{
+            let value = textToDouble
+            if value > lastIndication{
+                alertToPayment(lsString:  acoountLabelonView.text ?? "NoAccounts" , numbers: addPayTextfield.text ?? "NoNumbers" )}
+            else{
+                showAlert(title: "Внимание!", message: "Вводимые показания счетчика, должны быть больше предыдущего показания!")
+                
+            }
+        }
     }
     
-    func showAlert(){
-        let alert = UIAlertController(title: "Введите показания счетчика!!!", message: "" , preferredStyle: .alert)
-        let action = UIAlertAction(title: "OK", style: .cancel, handler: nil)
+    func showAlert(title: String, message: String){
+        let alert = UIAlertController(title: title , message: message  , preferredStyle: .alert)
+        let action = UIAlertAction(title: "OK", style: .cancel, handler: {(_) in
+            self.addPayTextfield.becomeFirstResponder()
+        })
         alert.addAction(action)
         
         present(alert, animated: true, completion: nil)
@@ -68,7 +77,7 @@ class NewBillViewController: UIViewController, UITextFieldDelegate {
                 self.alertController.dismiss(animated: true, completion: nil)
                 self.navigationController?.popViewController(animated: false)
             }
-            self.navigationController?.popViewController(animated: false)
+            self.dismiss(animated: true, completion: nil)
         }
         let action2 = UIAlertAction(title: "Отмена", style: .default, handler: nil)
         
@@ -104,3 +113,8 @@ class NewBillViewController: UIViewController, UITextFieldDelegate {
     
 }
 
+extension String {
+    var doubleValue: Double {
+        return Double(self) ?? 0
+    }
+}
