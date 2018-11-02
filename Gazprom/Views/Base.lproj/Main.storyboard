@@ -1641,7 +1641,6 @@
         <image name="wallet" width="20.333333969116211" height="20"/>
     </resources>
     <inferredMetricsTieBreakers>
-        <segue reference="IAZ-3d-Tjo"/>
         <segue reference="8xS-e8-L49"/>
         <segue reference="JT1-M6-paq"/>
         <segue reference="s8W-6s-pYR"/>

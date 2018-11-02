@@ -1,0 +1,6 @@
+framework module Pods_Gazprom {
+  umbrella header "Pods-Gazprom-umbrella.h"
+
+  export *
+  module * { export * }
+}
