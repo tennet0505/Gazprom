@@ -102,7 +102,7 @@ class AuthViewController: UIViewController, UITextFieldDelegate {
     
     @IBAction func registrationButton(_ sender: Any) {
         
-       
+        
         
     }
     

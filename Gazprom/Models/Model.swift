@@ -16,7 +16,6 @@ class MarkerModel: Mappable {
     longitude: Double?,
     title: String?
     
-    
     required init?(map: Map) {
     }
     func mapping(map: Map) {
@@ -24,8 +23,8 @@ class MarkerModel: Mappable {
         longitude <- map["lon"]
         title <- map["title"]        
     }
-    
 }
+
 class NewsModel: Mappable {
     
     var
@@ -41,6 +40,7 @@ class NewsModel: Mappable {
         created_at <- map["created_at"]
     }
 }
+
 class PaymentModel: Mappable {
     
     var
@@ -56,6 +56,7 @@ class PaymentModel: Mappable {
         logo <- map["logo"]
     }
 }
+
 class LogUrl: Mappable {
     
     var
@@ -68,6 +69,7 @@ class LogUrl: Mappable {
         url <- map["url"]
     }
 }
+
 class FAQModel: Mappable {
     
     var
@@ -104,8 +106,8 @@ class PersonalModel: Mappable {
         address <- map["address"]
         flat_number <- map["flat_number"]
     }
-    
 }
+
 class IndicationModel: Mappable {
     
     var
@@ -130,9 +132,6 @@ class IndicationModel: Mappable {
     }
 }
 
-
-
-
 class IndicationsPersonalAccountModel: Mappable{
     var
     personal_account:PersonalModel?,
@@ -143,8 +142,8 @@ class IndicationsPersonalAccountModel: Mappable{
         personal_account <- map["personal_account"]
         meter_reading <- map["meter_reading"]
     }
-    
 }
+
 class AuthModel: Mappable {
     
     var
@@ -157,6 +156,7 @@ class AuthModel: Mappable {
         user <- map["user"]
     }
 }
+
 class UserModel: Mappable {
     
     var

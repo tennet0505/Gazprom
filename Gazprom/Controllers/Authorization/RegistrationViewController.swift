@@ -77,6 +77,7 @@ class RegistrationViewController: UIViewController {
             }
             
         }else{
+            
             alert1(title: "Внимание!", message: "Заполните все поля!")
             
         }

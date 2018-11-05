@@ -57,24 +57,8 @@
             shouldBeEnabled = "Yes"
             ignoreCount = "0"
             continueAfterRunningActions = "No"
-            filePath = "Gazprom/API/Request.swift"
-            timestampString = "562844364.89193"
-            startingColumnNumber = "9223372036854775807"
-            endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "211"
-            endingLineNumber = "211"
-            landmarkName = "deletePersonal(id:successHandler:errorHandler:)"
-            landmarkType = "7">
-         </BreakpointContent>
-      </BreakpointProxy>
-      <BreakpointProxy
-         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
-         <BreakpointContent
-            shouldBeEnabled = "Yes"
-            ignoreCount = "0"
-            continueAfterRunningActions = "No"
             filePath = "Gazprom/Controllers/PersonalAccounts/PersonalAccountsViewController.swift"
-            timestampString = "562844364.891999"
+            timestampString = "563082699.590135"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
             startingLineNumber = "55"
@@ -90,7 +74,7 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "Gazprom/Controllers/PersonalAccounts/PersonalAccountsViewController.swift"
-            timestampString = "562844364.892539"
+            timestampString = "563082699.590727"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
             startingLineNumber = "54"
@@ -106,61 +90,13 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "Gazprom/Controllers/PersonalAccounts/PersonalAccountsViewController.swift"
-            timestampString = "562844364.892915"
+            timestampString = "563082699.591006"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
             startingLineNumber = "58"
             endingLineNumber = "58"
             landmarkName = "deleteAccount(id:)"
             landmarkType = "7">
-         </BreakpointContent>
-      </BreakpointProxy>
-      <BreakpointProxy
-         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
-         <BreakpointContent
-            shouldBeEnabled = "Yes"
-            ignoreCount = "0"
-            continueAfterRunningActions = "No"
-            filePath = "Gazprom/API/Request.swift"
-            timestampString = "562844364.893258"
-            startingColumnNumber = "9223372036854775807"
-            endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "215"
-            endingLineNumber = "215"
-            landmarkName = "deletePersonal(id:successHandler:errorHandler:)"
-            landmarkType = "7">
-            <Locations>
-               <Location
-                  shouldBeEnabled = "Yes"
-                  ignoreCount = "0"
-                  continueAfterRunningActions = "No"
-                  symbolName = "Gazprom.ApiClient.deletePersonal(id: Swift.Int, successHandler: () -&gt; (), errorHandler: (Swift.Error) -&gt; ()) -&gt; ()"
-                  moduleName = "Gazprom"
-                  usesParentBreakpointCondition = "Yes"
-                  urlString = "file:///Users/olegten/Gazprom/Gazprom/API/Request.swift"
-                  timestampString = "562843837.006922"
-                  startingColumnNumber = "9223372036854775807"
-                  endingColumnNumber = "9223372036854775807"
-                  startingLineNumber = "215"
-                  endingLineNumber = "215"
-                  offsetFromSymbolStart = "716">
-               </Location>
-               <Location
-                  shouldBeEnabled = "Yes"
-                  ignoreCount = "0"
-                  continueAfterRunningActions = "No"
-                  symbolName = "closure #1 (Alamofire.DefaultDataResponse) -&gt; () in Gazprom.ApiClient.deletePersonal(id: Swift.Int, successHandler: () -&gt; (), errorHandler: (Swift.Error) -&gt; ()) -&gt; ()"
-                  moduleName = "Gazprom"
-                  usesParentBreakpointCondition = "Yes"
-                  urlString = "file:///Users/olegten/Gazprom/Gazprom/API/Request.swift"
-                  timestampString = "562843837.010479"
-                  startingColumnNumber = "9223372036854775807"
-                  endingColumnNumber = "9223372036854775807"
-                  startingLineNumber = "216"
-                  endingLineNumber = "216"
-                  offsetFromSymbolStart = "36">
-               </Location>
-            </Locations>
          </BreakpointContent>
       </BreakpointProxy>
    </Breakpoints>

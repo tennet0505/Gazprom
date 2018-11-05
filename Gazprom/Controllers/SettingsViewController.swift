@@ -32,11 +32,8 @@ class SettingsViewController: UIViewController {
         if let mail = UserDefaults.standard.string(forKey: "email"){
             email = mail
         }
-        
         emailTextFields.text = email
       //  getPersonal()
-        
-        
     }
     func getPersonal() {
         SVProgressHUD.show()
@@ -72,8 +69,6 @@ class SettingsViewController: UIViewController {
         UserDefaults.standard.set("", forKey: "auth_token")
         UserDefaults.standard.set("", forKey: "idUser")
 
-
         dismiss(animated: true, completion: nil)
     }
-    
 }
