@@ -210,7 +210,7 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="Qyn-2x-0EQ">
-                                <rect key="frame" x="0.0" y="44" width="375" height="734"/>
+                                <rect key="frame" x="0.0" y="88" width="375" height="641"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <prototypes>
                                     <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="Cell" id="ZfU-tT-H5W" customClass="PersonalAccountsTableViewCell" customModule="Gazprom" customModuleProvider="target">
@@ -487,7 +487,7 @@
                                                 </subviews>
                                             </stackView>
                                             <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="kkY-Wm-5x6">
-                                                <rect key="frame" x="20" y="47.333333333333343" width="335" height="30"/>
+                                                <rect key="frame" x="20" y="47.333333333333329" width="335" height="30"/>
                                                 <nil key="textColor"/>
                                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                                 <textInputTraits key="textInputTraits"/>
@@ -980,7 +980,7 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" showsHorizontalScrollIndicator="NO" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="ZDW-Q5-PJ6">
-                                <rect key="frame" x="30" y="212.33333333333334" width="315" height="454.66666666666663"/>
+                                <rect key="frame" x="30" y="256.33333333333326" width="315" height="361.66666666666674"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <prototypes>
                                     <tableViewCell clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="Cell" id="K2P-Je-xa1" customClass="AccountsTableViewCell" customModule="Gazprom" customModuleProvider="target">
@@ -991,10 +991,7 @@
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="dateLabel" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="wUE-Lo-B0V">
-                                                    <rect key="frame" x="0.0" y="13" width="123" height="18"/>
-                                                    <constraints>
-                                                        <constraint firstAttribute="width" constant="123" id="Ax6-Dj-BRu"/>
-                                                    </constraints>
+                                                    <rect key="frame" x="0.0" y="13" width="67.666666666666671" height="18"/>
                                                     <fontDescription key="fontDescription" type="system" pointSize="15"/>
                                                     <color key="textColor" red="0.031372549020000001" green="0.40784313729999999" blue="0.67450980390000004" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                     <nil key="highlightedColor"/>
@@ -1007,6 +1004,7 @@
                                                 </label>
                                             </subviews>
                                             <constraints>
+                                                <constraint firstItem="c3z-rn-zP0" firstAttribute="leading" relation="greaterThanOrEqual" secondItem="wUE-Lo-B0V" secondAttribute="trailing" constant="8" symbolic="YES" id="3Fn-aO-JiM"/>
                                                 <constraint firstItem="wUE-Lo-B0V" firstAttribute="centerY" secondItem="JTy-po-MBh" secondAttribute="centerY" id="7ZJ-hq-uhB"/>
                                                 <constraint firstAttribute="trailing" secondItem="c3z-rn-zP0" secondAttribute="trailing" id="Eg2-kM-K8G"/>
                                                 <constraint firstItem="c3z-rn-zP0" firstAttribute="centerY" secondItem="JTy-po-MBh" secondAttribute="centerY" id="Mgc-bT-bSw"/>
@@ -1025,13 +1023,13 @@
                                 </connections>
                             </tableView>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="История платежей:" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="JPF-hz-zXk">
-                                <rect key="frame" x="91.666666666666671" y="142" width="191.66666666666663" height="24"/>
+                                <rect key="frame" x="91.666666666666671" y="186" width="191.66666666666663" height="24"/>
                                 <fontDescription key="fontDescription" type="boldSystem" pointSize="20"/>
                                 <color key="textColor" red="0.031372549020000001" green="0.40784313729999999" blue="0.67450980390000004" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="nGw-Ak-980">
-                                <rect key="frame" x="30" y="708" width="315" height="30"/>
+                                <rect key="frame" x="30" y="659" width="315" height="30"/>
                                 <color key="backgroundColor" red="0.031372549020000001" green="0.40784313729999999" blue="0.67450980390000004" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <state key="normal" title=" Добавить показания счетчика">
                                     <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
@@ -1046,7 +1044,7 @@
                                 </connections>
                             </button>
                             <stackView opaque="NO" contentMode="scaleToFill" spacing="10" translatesAutoresizingMaskIntoConstraints="NO" id="sWP-38-d7b">
-                                <rect key="frame" x="30" y="74" width="315" height="20.333333333333329"/>
+                                <rect key="frame" x="30" y="117.99999999999999" width="315" height="20.333333333333329"/>
                                 <subviews>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Л/счет:" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="cgv-Hj-mP2">
                                         <rect key="frame" x="0.0" y="0.0" width="57" height="20.333333333333332"/>
@@ -1068,7 +1066,7 @@
                                 <color key="backgroundColor" white="0.66666666669999997" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                             </stackView>
                             <stackView opaque="NO" contentMode="scaleToFill" spacing="10" translatesAutoresizingMaskIntoConstraints="NO" id="jql-pL-eaz">
-                                <rect key="frame" x="30" y="103" width="315" height="20.333333333333329"/>
+                                <rect key="frame" x="30" y="147" width="315" height="20.333333333333343"/>
                                 <subviews>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Адрес:" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="knJ-JI-c33">
                                         <rect key="frame" x="0.0" y="0.0" width="57" height="20.333333333333332"/>
@@ -1090,13 +1088,13 @@
                                 <color key="backgroundColor" white="0.66666666669999997" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                             </stackView>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Данные:" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="8jr-zj-kmX">
-                                <rect key="frame" x="248" y="183" width="67" height="21"/>
+                                <rect key="frame" x="248" y="227" width="67" height="21"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Дата:" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="7qs-yC-knH">
-                                <rect key="frame" x="60" y="183" width="43.333333333333343" height="20.333333333333343"/>
+                                <rect key="frame" x="60" y="227" width="43.333333333333343" height="20.333333333333343"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
@@ -1114,6 +1112,7 @@
                             <constraint firstItem="sWP-38-d7b" firstAttribute="leading" secondItem="f3E-jf-fR4" secondAttribute="leading" constant="30" id="M8a-p6-JG2"/>
                             <constraint firstItem="ZDW-Q5-PJ6" firstAttribute="leading" secondItem="f3E-jf-fR4" secondAttribute="leading" constant="30" id="Qbu-7W-hSd"/>
                             <constraint firstItem="8jr-zj-kmX" firstAttribute="top" secondItem="JPF-hz-zXk" secondAttribute="bottom" constant="17" id="VFc-bc-t3f"/>
+                            <constraint firstItem="8jr-zj-kmX" firstAttribute="leading" relation="greaterThanOrEqual" secondItem="7qs-yC-knH" secondAttribute="trailing" constant="8" symbolic="YES" id="WPu-la-EPj"/>
                             <constraint firstItem="ZDW-Q5-PJ6" firstAttribute="top" secondItem="8jr-zj-kmX" secondAttribute="bottom" constant="8.3300000000000001" id="bPR-Dd-BwQ"/>
                             <constraint firstItem="f3E-jf-fR4" firstAttribute="trailing" secondItem="sWP-38-d7b" secondAttribute="trailing" constant="30" id="bnt-R7-c93"/>
                             <constraint firstItem="7qs-yC-knH" firstAttribute="leading" secondItem="f3E-jf-fR4" secondAttribute="leading" constant="60" id="ebe-zH-a74"/>
@@ -1688,8 +1687,9 @@
         <image name="wallet" width="20.333333969116211" height="20"/>
     </resources>
     <inferredMetricsTieBreakers>
-        <segue reference="U2N-q7-wcA"/>
-        <segue reference="JT1-M6-paq"/>
+        <segue reference="21W-jg-Pu2"/>
+        <segue reference="2Sd-Qa-MMu"/>
+        <segue reference="pCZ-fw-lFa"/>
         <segue reference="s8W-6s-pYR"/>
     </inferredMetricsTieBreakers>
 </document>

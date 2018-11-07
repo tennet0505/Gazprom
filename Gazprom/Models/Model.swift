@@ -14,14 +14,20 @@ class MarkerModel: Mappable {
     var
     latitude: Double?,
     longitude: Double?,
-    title: String?
+    title: String?,
+    work_hour_from: Int?,
+    work_hour_till: Int?,
+    address: String?
     
     required init?(map: Map) {
     }
     func mapping(map: Map) {
         latitude <- map["lat"]
         longitude <- map["lon"]
-        title <- map["title"]        
+        title <- map["title"]
+        work_hour_from <- map["work_hour_from"]
+        work_hour_till <- map["work_hour_till"]
+        address <- map["address"]
     }
 }
 

@@ -28,11 +28,16 @@ class GoogleMapViewController: UIViewController {
     
     var markers = [MarkerModel]()
     let client = ApiClient()
+    var distanceArray = [Double]()
    
+    override func viewWillAppear(_ animated: Bool) {
+        super.viewWillAppear(animated)
+          getOffices()
+    }
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        getOffices()
+      
         
         locationManager.delegate = self
         locationManager.requestWhenInUseAuthorization()
@@ -64,7 +69,7 @@ class GoogleMapViewController: UIViewController {
         
     }
     
-    @objc func ShareMap(sender: UIButton)  {
+    @objc func ShareMap(sender: Any?)  {
         print("TapShare")
         
         let alert = UIAlertController(title: "Открыть", message: "", preferredStyle: .actionSheet)
@@ -108,9 +113,14 @@ class GoogleMapViewController: UIViewController {
             if let lat = marker.latitude, let long = marker.longitude{
                 let position = CLLocationCoordinate2D(latitude: lat, longitude: long)
                 let markerName = GMSMarker(position: position)
-                markerName.title = marker.title
-                markerName.map = mapView
-            }
+                if let mark = marker.title, let markHourFrom = marker.work_hour_from, let markHourTill = marker.work_hour_till, let markAddress = marker.address  {
+                    let snippet = "Адрес: \(markAddress) \nРежим работы: \nс \(markHourFrom)ч. до \(markHourTill)ч."
+                    markerName.snippet = snippet
+                    markerName.title = mark
+                    markerName.map = mapView
+                    
+                }
+                            }
         }
     }
     
@@ -123,11 +133,60 @@ class GoogleMapViewController: UIViewController {
                 print(office.latitude as Any)
                 print(office.longitude as Any)
                 print(office.title as Any)
+                
+                
+                
             }
             self.addMarkerPoints(markers: self.markers)
+            self.shortWayForOffice(arrayOfOffice: self.markers)
+            
         }) { (error) in
             print(error)
         }
+    }
+    
+    func shortWayForOffice(arrayOfOffice: [MarkerModel]){
+        
+        
+//        let markerLocation = CLLocation(latitude: marker.position.latitude, longitude: marker.position.longitude)
+//        let metres = userLocation.distance(from: markerLocation)
+//        print(metres) //will be in metres
+        let userLocation = CLLocation(latitude: fromLocation.latitude, longitude: fromLocation.longitude)
+        
+        for marker in arrayOfOffice{
+            
+            let markerLocation = CLLocation(latitude: marker.latitude ?? 0.0, longitude: marker.longitude ?? 0.0)
+            let metres = userLocation.distance(from: markerLocation)
+                print(metres) //will be in metres
+            distanceArray.append(metres)
+        }
+      
+        if let minPosition = distanceArray.min(), let index = distanceArray.index(of: minPosition) {
+            let marker = markers[index]
+           
+            let alert = UIAlertController(title: "Ближайший офис" , message: marker.title , preferredStyle: .alert)
+            let action = UIAlertAction(title: "Показать путь", style: .default, handler: {(action) in
+                if let long = marker.longitude, let lat = marker.latitude{
+                    self.toLocation.latitude = lat
+                    self.toLocation.longitude = long
+                }
+                
+                self.ShareMap(sender: nil)
+                
+            })
+            let action1 = UIAlertAction(title: "Отмена", style: .default, handler: nil)
+            alert.addAction(action1)
+            alert.addAction(action)
+            present(alert, animated: true, completion: nil)
+            
+            print(marker, index)
+        }
+        
+
+        
+        
+        
+        
     }
 }
 
