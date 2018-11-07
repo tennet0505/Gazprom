@@ -23,9 +23,27 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         GMSPlacesClient.provideAPIKey(YOUR_API_KEY)
         GMSServices.provideAPIKey(YOUR_API_KEY)
         IQKeyboardManager.shared.enable = true
-        
+        setRootViewController()
         // Override point for customization after application launch.
         return true
+    }
+    
+    func setRootViewController() {
+        let token = UserDefaults.standard.string(forKey: "auth_token")
+        
+        if token != ""{
+            let storyboard =  UIStoryboard(name: "Main", bundle: nil)
+            let vc = storyboard.instantiateViewController(withIdentifier: "TabBarController")
+            let appDelegate = UIApplication.shared.delegate as! AppDelegate
+            appDelegate.window?.rootViewController = vc
+            
+        } else {
+            let storyboard =  UIStoryboard(name: "Main", bundle: nil)
+            let vc = storyboard.instantiateViewController(withIdentifier: "MainViewController")
+            let appDelegate = UIApplication.shared.delegate as! AppDelegate
+            appDelegate.window?.rootViewController = vc
+            
+        }
     }
 
     func applicationWillResignActive(_ application: UIApplication) {

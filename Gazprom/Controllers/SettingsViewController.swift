@@ -68,7 +68,10 @@ class SettingsViewController: UIViewController {
         print("LogOut Button Tap")
         UserDefaults.standard.set("", forKey: "auth_token")
         UserDefaults.standard.set("", forKey: "idUser")
+        let storyboard =  UIStoryboard(name: "Main", bundle: nil)
+        let vc = storyboard.instantiateViewController(withIdentifier: "MainViewController")
+        present(vc, animated: true, completion: nil)
 
-        dismiss(animated: true, completion: nil)
+//        dismiss(animated: true, completion: nil)
     }
 }
