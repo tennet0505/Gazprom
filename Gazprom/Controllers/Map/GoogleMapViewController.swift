@@ -50,11 +50,11 @@ class GoogleMapViewController: UIViewController {
         mapView.isMyLocationEnabled = true
         mapView.settings.myLocationButton = true
         
-        let button = UIButton(frame: view.frame)
-        let btnImage = UIImage(named: "mapOneWay")
-        button.setImage(btnImage, for: .normal)
-        button.frame = CGRect(x:260, y: 65, width: 48, height: 41)
-        button.addTarget(self, action: #selector(GoogleMapViewController.addDirectionOnMap(sender:)), for: .touchUpInside)
+//        let button = UIButton(frame: view.frame)
+//        let btnImage = UIImage(named: "mapOneWay")
+//        button.setImage(btnImage, for: .normal)
+//        button.frame = CGRect(x:260, y: 65, width: 48, height: 41)
+//        button.addTarget(self, action: #selector(GoogleMapViewController.addDirectionOnMap(sender:)), for: .touchUpInside)
 
         let buttonShare = UIButton(frame: view.frame)
         let btnImageShare = UIImage(named: "Map")
@@ -64,7 +64,7 @@ class GoogleMapViewController: UIViewController {
         
         view.addSubview(self.mapView)
         view.addSubview(buttonShare)
-        view.addSubview(button)
+//        view.addSubview(button)
         mapView.delegate = self
         
     }
